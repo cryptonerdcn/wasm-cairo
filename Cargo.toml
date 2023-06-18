@@ -1,0 +1,39 @@
+[package]
+name = "wasm-cairo"
+version = "0.1.0"
+authors = ["cryptonerdcn <cryptonerdcn@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = ["console_error_panic_hook"]
+
+[dependencies]
+serde_json = "1.0.87"
+wasm-bindgen = "0.2.87"
+rust-embed = "6.7.0"
+cairo-lang-compiler = { package = "cairo-lang-compiler", git = "https://github.com/cryptonerdcn/cairo.git", rev = "7ccbb4087978f25f54b517ca538ad61eef58a316"}
+
+
+# The `console_error_panic_hook` crate provides better debugging of panics by
+# logging them with `console.error`. This is great for development, but requires
+# all the `std::fmt` and `std::panicking` infrastructure, so isn't great for
+# code size when deploying.
+console_error_panic_hook = { version = "0.1.6", optional = true }
+
+# `wee_alloc` is a tiny allocator for wasm that is only ~1K in code size
+# compared to the default allocator's ~10K. It is slower than the default
+# allocator, however.
+wee_alloc = { version = "0.4.5", optional = true }
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.13"
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+parking_lot_core = "=0.8.0"
