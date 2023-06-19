@@ -2,6 +2,7 @@ mod utils;
 use std::path::Path;
 
 use cairo_lang_compiler::{compile_cairo_project_with_input_string, SierraProgram, CompilerConfig};
+use cairo_lang_runner::run_with_input_program_string;
 use rust_embed::RustEmbed;
 
 use wasm_bindgen::prelude::*;
@@ -33,12 +34,7 @@ pub fn greet() {
 }
 
 #[wasm_bindgen(js_name = compileCairoProgram)]
-pub fn compile_cairo_program(cairo_program: String) -> Result<(), JsError> {
-    
-    /*let test_cairo = Asset::get("test.cairo").unwrap();
-    let test_cairo_str = String::from_utf8(test_cairo.data.to_vec()).unwrap();
-    log(test_cairo_str.as_str());*/
-
+pub fn compile_cairo_program(cairo_program: String) -> Result<String, JsError> {
     let sierra_program = compile_cairo_project_with_input_string(Path::new("./test123.cairo"), &cairo_program, CompilerConfig {
         replace_ids: false,
         ..CompilerConfig::default()
@@ -54,6 +50,23 @@ pub fn compile_cairo_program(cairo_program: String) -> Result<(), JsError> {
             e.to_string()
         }
     };
-    log(sierra_program_str.as_str());
-    Ok(())
+    Ok(sierra_program_str)
+}
+
+#[wasm_bindgen(js_name = runCairoProgram)]
+pub fn run_cairo_program(cairo_program: String) -> Result<String, JsError> {
+
+    let cairo_program_result = run_with_input_program_string(&cairo_program, None, true);
+    let cairo_program_result_str = match cairo_program_result {
+        Ok(cairo_program_result_str) => {
+            log("cairo_program_result is Ok");
+            cairo_program_result_str
+        }
+        Err(e) => {
+            log("cairo_program_result is Err");
+            log(e.to_string().as_str());
+            e.to_string()
+        }
+    };
+    Ok(cairo_program_result_str)
 }
