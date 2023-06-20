@@ -14,8 +14,8 @@ default = ["console_error_panic_hook"]
 serde_json = "1.0.87"
 wasm-bindgen = "0.2.87"
 rust-embed = "6.7.0"
-cairo-lang-compiler = { package = "cairo-lang-compiler", git = "https://github.com/cryptonerdcn/cairo.git", rev = "50531d5dc07510fa1704c6add6ff26203d9ee7c0"}
-cairo-lang-runner = { package = "cairo-lang-runner", git = "https://github.com/cryptonerdcn/cairo.git", rev = "50531d5dc07510fa1704c6add6ff26203d9ee7c0", features = ["alloc"], default-features = false}
+cairo-lang-compiler = { package = "cairo-lang-compiler", git = "https://github.com/cryptonerdcn/cairo.git", rev = "0b6807233ca71b2cec67d7a7100724d0cca1764b"}
+cairo-lang-runner = { package = "cairo-lang-runner", git = "https://github.com/cryptonerdcn/cairo.git", rev = "0b6807233ca71b2cec67d7a7100724d0cca1764b", features = ["alloc"], default-features = false}
 
 
 # The `console_error_panic_hook` crate provides better debugging of panics by

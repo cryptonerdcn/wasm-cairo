@@ -29,9 +29,9 @@ pub fn greet(s: &str) -> String {
 }
 
 #[wasm_bindgen(js_name = compileCairoProgram)]
-pub fn compile_cairo_program(cairo_program: String) -> Result<String, JsError> {
+pub fn compile_cairo_program(cairo_program: String, replace_ids: bool) -> Result<String, JsError> {
     let sierra_program = compile_cairo_project_with_input_string(Path::new("./test123.cairo"), &cairo_program, CompilerConfig {
-        replace_ids: false,
+        replace_ids: replace_ids,
         ..CompilerConfig::default()
     });
     let sierra_program_str = match sierra_program {
@@ -49,9 +49,9 @@ pub fn compile_cairo_program(cairo_program: String) -> Result<String, JsError> {
 }
 
 #[wasm_bindgen(js_name = runCairoProgram)]
-pub fn run_cairo_program(cairo_program: String) -> Result<String, JsError> {
+pub fn run_cairo_program(cairo_program: String, available_gas: Option<usize>, print_full_memory: bool, use_dbg_print_hint: bool) -> Result<String, JsError> {
 
-    let cairo_program_result = run_with_input_program_string(&cairo_program, None, true);
+    let cairo_program_result = run_with_input_program_string(&cairo_program, available_gas, print_full_memory, use_dbg_print_hint);
     let cairo_program_result_str = match cairo_program_result {
         Ok(cairo_program_result_str) => {
             log("cairo_program_result is Ok");

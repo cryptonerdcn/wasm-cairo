@@ -31,3 +31,26 @@ function openTab(evt, tabName) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementsByClassName("sidebar-item")[0].click();
 document.getElementsByClassName("tablink")[0].click();
+
+// Use the 'DOMContentLoaded' event to ensure the DOM is fully loaded before trying to add event listeners.
+document.addEventListener('DOMContentLoaded', function() {
+
+    document.getElementById('open-file-button').addEventListener('click', function() {
+        // Simulate a click on the hidden file input when the button is clicked
+        document.getElementById('file-input').click();
+    });
+
+    document.getElementById('file-input').addEventListener('change', function(e) {
+        // When a file is selected, load its content into the textarea
+        var file = e.target.files[0];
+        if (file) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById("cairo_program").value = e.target.result;
+            }
+            reader.readAsText(file);
+        }
+    });
+
+});
+

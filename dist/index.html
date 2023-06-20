@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <script type="module" src="./js/index.mjs"></script>
     <title>AstroEditor:A Cairo WebAssembly Editor</title>
 </head>
+
 <body>
     <div class="navbar">
         <div class="logo">Logo</div>
@@ -15,8 +17,10 @@
     </div>
     <div class="editor">
         <div class="sidebar">
-            <button class="sidebar-item active" onclick="openPage(event, 'Code')"> <i class="icon-file">📁</i> Files </button>
-            <button class="sidebar-item" onclick="openPage(event, 'Settings')"> <i class="icon-settings">⚙️</i> Settings </button>
+            <button class="sidebar-item active" onclick="openPage(event, 'Code')"> <i class="icon-file">📁</i> Editor
+            </button>
+            <button class="sidebar-item" onclick="openPage(event, 'Settings')"> <i class="icon-settings">⚙️</i> Settings
+            </button>
         </div>
         <div class="main">
             <div id="Code" class="page-content">
@@ -27,23 +31,53 @@
                 <div class="toolbar">
                     <button id="Compile" onclick="ClickFunc()">Compile</button>
                     <button id="Run" onclick="runFunc()">Run</button>
+                    <input type="file" id="file-input" style="display: none" />
+                    <button id="open-file-button">Open File</button>
                 </div>
                 <div class="tab">
                     <button class="tablink active" onclick="openTab(event, 'CompileResult')">Compile Result</button>
-                    <button class="tablink" onclick="openTab(event, 'RunResult')">Run Result</button>
+                    <button class="tablink" onclick="openTab(event, 'RunResult')">Output</button>
                 </div>
                 <div id="CompileResult" class="tabcontent">
-                    <textarea readonly id="sierra_program" class="console">Compile Result will be shown here...</textarea>
+                    <textarea readonly id="sierra_program"
+                        class="console">Compile Result will be shown here...</textarea>
                 </div>
                 <div id="RunResult" class="tabcontent" style="display: none;">
-                    <textarea readonly id="run_result" class="console">Run Result will be shown here...</textarea>
+                    <textarea readonly id="run_result" class="console">No output.</textarea>
                 </div>
             </div>
             <div id="Settings" class="page-content" style="display: none;">
-                <p>Settings go here...</p>
+                <h2>Cairo Compiler settings</h2>
+                <table>
+                    <tr>
+                        <td><input type="checkbox" id="replace-ids"> Replace ids</td>
+                    </tr>
+                    <tr>
+                        <td><label for="cairo-version">Cairo version:</label></td>
+                        <td>
+                            <select id="cairo-version">
+                                <option value="1.10">1.10</option>
+                                <option value="2.0">2.0</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <h2>Cairo VM settings</h2>
+                <table>
+                    <tr>
+                        <td><input type="checkbox" id="print-full-memory"> Print full memory</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="use-cairo-debug-print"> Use Cairo DEBUG Print</td>
+                    </tr>
+                    <tr>
+                        <td>Available Gas: <input type="number" id="available-gas"></td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
     <script src="js/script.js"></script>
 </body>
+
 </html>

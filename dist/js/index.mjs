@@ -10,12 +10,13 @@ worker.onmessage = function (e) {
 // Run cairo-rs through our proxy function.
 window.ClickFunc = () => {
     //get textarea cairo_program's value
-    let cairo_program = document.getElementById("cairo_program").value;
+    const cairo_program = document.getElementById("cairo_program").value;
     console.log("clicked!");
     // disable compile button
     document.getElementById("Compile").disabled = true;
     worker.postMessage({
         data: cairo_program,
+        replaceIds: document.getElementById("replace-ids").checked ,
         functionToRun: "compileCairoProgram"
     });
     worker.onmessage = function(e) {
@@ -26,10 +27,14 @@ window.ClickFunc = () => {
 
 window.runFunc = () => {
     //get textarea cairo_program's value
-    let cairo_program = document.getElementById("cairo_program").value;
+    const cairo_program = document.getElementById("cairo_program").value;
     document.getElementById("Run").disabled = true;
+    const gasValue = document.getElementById("available-gas").value;
     worker.postMessage({
         data: cairo_program,
+        availableGas: gasValue == "" ? undefined : parseInt(gasValue),
+        printFullMemory: document.getElementById("print-full-memory").checked,
+        useDBGPrintHint: document.getElementById("use-cairo-debug-print").checked,
         functionToRun: "runCairoProgram"
     });
     worker.onmessage = function(e) {
