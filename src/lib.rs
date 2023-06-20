@@ -24,13 +24,8 @@ extern "C" {
 }
 
 #[wasm_bindgen]
-extern {
-    fn alert(s: &str);
-}
-
-#[wasm_bindgen]
-pub fn greet() {
-    alert("Hello, wasm-cairo!");
+pub fn greet(s: &str) -> String {
+  return format!("Hello {}!", s);
 }
 
 #[wasm_bindgen(js_name = compileCairoProgram)]
