@@ -28,7 +28,6 @@ window.runFunc = () => {
     //get textarea cairo_program's value
     let cairo_program = document.getElementById("cairo_program").value;
     document.getElementById("Run").disabled = true;
-    //wait for runCairoProgram to finish and get result
     worker.postMessage({
         data: cairo_program,
         functionToRun: "runCairoProgram"

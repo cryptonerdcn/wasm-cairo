@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+.editor {
+    display: flex;
+    height: calc(100vh - 60px); /* Subtracting the height of the navbar */
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    overflow: auto;
+}
+
+.main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+}
+
+.codeEditor, .console {
+    flex-grow: 1;
+    padding: 15px;
+    border: none;
+    resize: none;
+}
+
+.codeEditor {
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    height: 60%;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: flex-start; 
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    height: 3%;
+}
+
+.toolbar button {
+    margin-right: 5px; 
+}
+
+.page-content {
+    display: none;
+    height: 100%;
+}
+
+.tab {
+    border: none;
+    outline: none;
+    height: 5%;
+    background-color: #555;
+    display: block;
+}
+/* Style the tab buttons */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 10px;
+    width: 10%;
+    height: 100%;
+}
+
+/* Style the tab content */
+.tabcontent {
+    width: 100%;
+    height: 20%;
+}
+
+textarea.console {
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    border: none;
+    resize: none;
+    background-color: black;
+}
+
+/* Change color of the active tab button */
+.tablink.active {
+    background-color: #222;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #333;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.sidebar-item:hover {
+    background-color: #f0f0f0;
+}
+
+.sidebar-item.active {
+    background-color: #ddd;
+}
+
+.icon-file, .icon-settings {
+    margin-right: 10px;
+}
