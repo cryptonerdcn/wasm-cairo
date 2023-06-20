@@ -45,8 +45,9 @@ body {
 .codeEditor {
     border-bottom: 1px solid #ddd;
     width: 100%;
-    height: 64%;
+    height: 100%;
     box-sizing: border-box;
+    display: none;
 }
 
 .toolbar {
@@ -178,4 +179,58 @@ textarea.console {
 
 #Settings td {
     padding: 0px;
+}
+
+.tab-bar button {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.tabs-content {
+    display: block;
+    width: 100%;
+    height: 60%;
+}
+
+/* Tab bar styles */
+.tab-bar {
+    display: flex;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    height: 3%;
+}
+
+.tab-item {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-right: 2px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+}
+
+.tab-item:hover {
+    background-color: #f1f1f1;
+}
+
+.tab-item.active {
+    background-color: #949494;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+/* New tab button styles */
+#new-tab {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0px 5px;
+    cursor: pointer;
+}
+
+#new-tab:hover {
+    background-color: #45a049;
 }

@@ -24,10 +24,17 @@
         </div>
         <div class="main">
             <div id="Code" class="page-content">
-                <textarea id="cairo_program" class="codeEditor">use debug::PrintTrait;
-                fn main() {
-                    'Hello, StarknetAstro!'.print();
-                }</textarea>
+                <div class="tab-bar">
+                    <button class="tab-item active">Default</button>
+                    <button id="new-tab">+</button>
+                </div>
+                <div class="tabs-content">
+                    <!-- Tab content will be added here dynamically -->
+                    <textarea id="cairo_program" class="codeEditor active">use debug::PrintTrait;
+                    fn main() {
+                        'Hello, StarknetAstro!'.print();
+                    }</textarea>
+                </div>
                 <div class="toolbar">
                     <button id="Compile" onclick="ClickFunc()">Compile</button>
                     <button id="Run" onclick="runFunc()">Run</button>

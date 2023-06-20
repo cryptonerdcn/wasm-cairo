@@ -46,7 +46,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (file) {
             var reader = new FileReader();
             reader.onload = function(e) {
-                document.getElementById("cairo_program").value = e.target.result;
+                // document.getElementById("cairo_program").value = e.target.result;
+                const area = getActiveTextArea()
+                if (area) {
+                    area.value = e.target.result;
+                }
             }
             reader.readAsText(file);
         }
@@ -54,3 +58,79 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+// Activate the default tab content
+document.getElementById("cairo_program").style.display = "block";
+
+Array.from(document.querySelectorAll(".tab-item")).forEach(function(tab) {
+    tab.addEventListener("click", function() {
+        // Remove .active class from all tabs
+        Array.from(document.querySelectorAll(".tab-item")).forEach(function(tab) {
+            tab.classList.remove("active");
+        });
+
+        // Add .active class to clicked tab
+        this.classList.add("active");
+
+        // Hide all textareas
+        Array.from(document.querySelectorAll(".codeEditor")).forEach(function(editor) {
+            editor.style.display = "none";
+        });
+
+        // Show the textarea associated with the clicked tab
+        document.getElementById("cairo_program").style.display = "block";
+        document.getElementById("cairo_program").classList.add("active");
+    });
+});
+
+document.getElementById("new-tab").addEventListener("click", function() {
+    // Create new tab
+    var newTab = document.createElement("button");
+    newTab.textContent = "New File"; 
+    newTab.className = "tab-item";
+
+    // Create new textarea for the new tab
+    var newTextArea = document.createElement("textarea");
+    newTextArea.className = "codeEditor";
+
+    // Add the new tab before the plus button
+    this.parentNode.insertBefore(newTab, this);
+
+    // Add the new textarea to the tabs content
+    document.querySelector(".tabs-content").appendChild(newTextArea);
+    
+    // Attach event to new tab
+    newTab.addEventListener("click", function() {
+        // Hide all textareas
+        Array.from(document.querySelectorAll(".codeEditor")).forEach(function(editor) {
+            editor.style.display = "none";
+            editor.classList.remove("active");
+        });
+
+        Array.from(document.querySelectorAll(".tab-item")).forEach(function(tab) {
+            tab.classList.remove("active");
+        });
+
+        // Add .active class to clicked tab
+        this.classList.add("active");
+
+        // Show the textarea associated with the clicked tab
+        newTextArea.style.display = "block";
+        newTextArea.classList.add("active");
+    });
+});
+
+
+const getActiveTextArea = () => {
+    // Select all textareas with the "active" class
+    const textAreas = document.querySelectorAll('textarea.active');
+
+    // Loop through the textareas and return the one with style.display not set to "none"
+    for (var i = 0; i < textAreas.length; i++) {
+        if (textAreas[i].style.display !== 'none') {
+            return textAreas[i];
+        }
+    }
+
+    // Return null if no such textarea is found
+    return null;
+}
