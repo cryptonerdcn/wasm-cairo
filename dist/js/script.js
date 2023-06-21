@@ -135,18 +135,42 @@ const getActiveTextArea = () => {
     return null;
 }
 
-window.saveFileFunc = async () => {
-    const textarea = document.querySelector('.codeEditor.active');
+// Save File Function
+window.saveFileFunc = async (fileName, fileElementId) => {
+    const textarea = document.getElementById(fileElementId);
     if(textarea.value == "") {
         return;
     }
-    const options = {
-        suggestedName: 'astro.cairo',
-        types: [{
-            description: 'Cairo File',
-            accept: { 'text/plain': ['.cairo'] },
-        }],
-    };
+
+    let options = {};
+
+    if(fileElementId === 'sierra_program') {
+        options = {
+            suggestedName: 'astro_compiled.sierra',
+            types: [{
+                description: 'Sierra File',
+                accept: { 'text/plain': ['.sierra'] },
+            }],
+        };
+        if(textarea.value.includes("sierra_program")) {
+            options = {
+                suggestedName: 'astro_compiled.json',
+                types: [{
+                    description: 'JSON File',
+                    accept: { 'text/plain': ['.json'] },
+                }],
+            };
+        }
+    } else {
+        options = {
+            suggestedName: fileName,
+            types: [{
+                description: 'File',
+                accept: { 'text/plain': ['.cairo'] },
+            }],
+        };
+    }
+    
     const fileHandle = await window.showSaveFilePicker(options);
     const writable = await fileHandle.createWritable();
     await writable.write(textarea.value);
@@ -154,31 +178,10 @@ window.saveFileFunc = async () => {
     alert("File has been saved.");
 }
 
-// Attach the function to the save button
-document.getElementById("save-file-button").addEventListener("click", saveFileFunc);
+// Attach the function to the save buttons
+document.getElementById("save-file-button").addEventListener("click", () => saveFileFunc('astro.cairo', 'cairo_program'));
+document.getElementById("save-compiled-file-button").addEventListener("click", () => saveFileFunc('astro_compiled.sierra', 'sierra_program'));
 
-// Save the compiled file
-window.saveCompiledFileFunc = async () => {
-    const textarea = document.getElementById('sierra_program');
-    if(textarea.value == "") {
-        return;
-    }
-    const options = {
-        suggestedName: 'astro_compiled.json',
-        types: [{
-            description: 'JSON File',
-            accept: { 'text/plain': ['.json'] },
-        }],
-    };
-    const fileHandle = await window.showSaveFilePicker(options);
-    const writable = await fileHandle.createWritable();
-    await writable.write(textarea.value);
-    await writable.close();
-    alert("File has been saved.");
-}
-
-// Attach the function to the save button
-document.getElementById("save-compiled-file-button").addEventListener("click", saveCompiledFileFunc);
 
 // Load the default cairo program
 window.addEventListener('DOMContentLoaded', (event) => {
