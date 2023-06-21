@@ -3,6 +3,7 @@ use std::path::Path;
 
 use cairo_lang_compiler::{compile_cairo_project_with_input_string, SierraProgram, CompilerConfig};
 use cairo_lang_runner::run_with_input_program_string;
+use cairo_lang_starknet::contract_class::starknet_wasm_compile_with_input_string;
 use rust_embed::RustEmbed;
 
 use wasm_bindgen::prelude::*;
@@ -64,4 +65,21 @@ pub fn run_cairo_program(cairo_program: String, available_gas: Option<usize>, pr
         }
     };
     Ok(cairo_program_result_str)
+}
+
+#[wasm_bindgen(js_name = compileStarknetContract)]
+pub fn compile_starknet_contract(starknet_contract: String, replace_ids: bool) -> Result<String, JsError> {
+    let sierra_contract = starknet_wasm_compile_with_input_string(&starknet_contract, replace_ids, None, None, None);
+    let sierra_contract_str = match sierra_contract {
+        Ok(sierra_program) => {
+            log("sierra_contract is Ok");
+            sierra_program.to_string()
+        }
+        Err(e) => {
+            log("sierra_contract is Err");
+            log(e.to_string().as_str());
+            e.to_string()
+        }
+    };
+    Ok(sierra_contract_str)
 }

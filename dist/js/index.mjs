@@ -1,7 +1,6 @@
 const maxWorkers = 1
 const worker = new Worker('/js/worker.cjs')
 
-// Run cairo-rs through our proxy function.
 window.ClickFunc = () => {
     //get textarea cairo_program's value
     const cairo_program = getActiveTextAreaValue();
@@ -11,11 +10,20 @@ window.ClickFunc = () => {
     console.log("clicked!");
     // disable compile button
     document.getElementById("Compile").disabled = true;
-    worker.postMessage({
-        data: cairo_program,
-        replaceIds: document.getElementById("replace-ids").checked ,
-        functionToRun: "compileCairoProgram"
-    });
+    if (checkIsContract(cairo_program)) {
+        worker.postMessage({
+            data: cairo_program,
+            replaceIds: document.getElementById("replace-ids").checked ,
+            functionToRun: "compileStarknetContract"
+        });
+    } else {
+        worker.postMessage({
+            data: cairo_program,
+            replaceIds: document.getElementById("replace-ids").checked ,
+            functionToRun: "compileCairoProgram"
+        });
+    }
+
     worker.onmessage = function(e) {
         document.getElementById("sierra_program").value = e.data;
         document.getElementById("Compile").disabled = false;
@@ -57,3 +65,19 @@ const getActiveTextAreaValue = () => {
     // Return null if no such textarea is found
     return null;
 }
+
+const checkIsContract = (codeString) => {
+    // Remove single-line comments
+    let lines = codeString.split('\n');
+    lines = lines.map(line => line.split('//')[0]);
+  
+    // Remove multi-line comments
+    let noCommentsCode = lines.join('\n').split('/*');
+    for (let i = 1; i < noCommentsCode.length; i++) {
+      noCommentsCode[i] = noCommentsCode[i].substring(noCommentsCode[i].indexOf('*/') + 2);
+    }
+    noCommentsCode = noCommentsCode.join('');
+  
+    // Check if #[contract] is in the code part
+    return noCommentsCode.includes('#[contract]');
+  }
