@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cairo WebAssembly Demo</title>
+    <script type="module" src="./js/index.mjs"></script>
+</head>
+
+<body>
+    <h1>Cairo WebAssembly Demo</h1>
+    <textarea name="" id="cairo_program" cols="30" rows="10">
+    use debug::PrintTrait;
+    fn main() {
+        'Hello, StarknetAstro!'.print();
+    }
+    </textarea>
+    <br />
+    <button id="Compile" onclick="ClickFunc()">Compile Cairo</button>
+    <button id="Run" onclick="runFunc()">Run Cairo</button>
+    <br />
+    <textarea name="" id="sierra_program" cols="30" rows="10"></textarea>
+    <br />
+    <textarea name="" id="run_result" cols="30" rows="10"></textarea>
+</body>
+
+</html>
