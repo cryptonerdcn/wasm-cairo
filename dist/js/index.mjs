@@ -26,6 +26,8 @@ window.ClickFunc = () => {
 
     worker.onmessage = function(e) {
         document.getElementById("sierra_program").value = e.data;
+        openTab(event,'CompileResult');
+        document.getElementById("CompileResultTagButton").className += " active";
         document.getElementById("Compile").disabled = false;
     };
 }
@@ -47,6 +49,8 @@ window.runFunc = () => {
     });
     worker.onmessage = function(e) {
         document.getElementById("run_result").value = e.data;
+        openTab(event,'RunResult');
+        document.getElementById("RunResultTagButton").className += " active";
         document.getElementById("Run").disabled = false;
     };
 }
