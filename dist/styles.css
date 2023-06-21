@@ -22,13 +22,14 @@ body {
 }
 
 .sidebar {
-    width: 200px;
+    width: 10%;
     background-color: #f0f0f0;
     padding: 15px;
     overflow: auto;
 }
 
 .main {
+    width: 90%;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -141,7 +142,7 @@ textarea.console {
     background-color: #ddd;
 }
 
-.icon-file, .icon-settings {
+.sidebar-icon {
     margin-right: 10px;
 }
 
@@ -243,4 +244,20 @@ textarea.console {
 
 #new-tab:hover {
     background-color: #45a049;
+}
+
+#About {
+    padding: 15px;
+    margin: 15px;
+}
+
+#About h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#About p {
+    font-size: 16px;
+    color: #333;
+    text-align: justify;
 }

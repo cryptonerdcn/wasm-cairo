@@ -7,19 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script type="module" src="./js/index.mjs"></script>
-    <title>WASM-Cairo Editor</title>
+    <title>Astro Editor: A Web Assembly Editor for Cairo </title>
 </head>
 
 <body>
     <div class="navbar">
-        <div class="logo">WASM-Cairo Editor</div>
+        <div class="logo">Astro Editor</div>
         <button>Connect Wallet</button>
     </div>
     <div class="editor">
         <div class="sidebar">
-            <button class="sidebar-item active" onclick="openPage(event, 'Code')"> <i class="icon-file">📁</i> Editor
+            <button class="sidebar-item active" onclick="openPage(event, 'Code')"> <i class="sidebar-icon">📁</i> Editor
             </button>
-            <button class="sidebar-item" onclick="openPage(event, 'Settings')"> <i class="icon-settings">⚙️</i> Settings
+            <button class="sidebar-item" onclick="openPage(event, 'Settings')"> <i class="sidebar-icon">⚙️</i> Settings
+            </button>
+            <button class="sidebar-item" onclick="openPage(event, 'About')"> <i class="sidebar-icon">ℹ️</i> About
             </button>
         </div>
         <div class="main">
@@ -84,6 +86,16 @@
                     </tr>
                 </table>
             </div>
+            <div id="About" class="page-content" style="display: none;">
+                <h2>About Astro Editor</h2>
+                <p></p>
+                <h2>About WASM-Cairo Project</h2>
+                <p></p>
+                <h2>About Me</h2>
+                <p>I'm cryptonedcn from Starknet Astro</p>
+                <h2>About Starknet Astro</h2>
+                <p>Starknet Astro</p>
+            </div>            
         </div>
     </div>
     <script src="js/script.js"></script>

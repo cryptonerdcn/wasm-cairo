@@ -1,14 +1,21 @@
 // JavaScript for sidebar navigation
 function openPage(evt, pageName) {
+    // Declare all variables
     let i, pageContent, sidebarItem;
+
+    // Get all elements with class="page-content" and hide them
     pageContent = document.getElementsByClassName("page-content");
     for (i = 0; i < pageContent.length; i++) {
         pageContent[i].style.display = "none";
     }
+
+    // Get all elements with class="sidebar-item" and remove the class "active"
     sidebarItem = document.getElementsByClassName("sidebar-item");
     for (i = 0; i < sidebarItem.length; i++) {
         sidebarItem[i].className = sidebarItem[i].className.replace(" active", "");
     }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(pageName).style.display = "block";
     evt.currentTarget.className += " active";
 }
