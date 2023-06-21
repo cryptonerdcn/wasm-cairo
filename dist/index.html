@@ -30,24 +30,26 @@
                 </div>
                 <div class="tabs-content">
                     <!-- Tab content will be added here dynamically -->
-                    <textarea id="cairo_program" class="codeEditor active">use debug::PrintTrait;
-                    fn main() {
-                        'Hello, StarknetAstro!'.print();
-                    }</textarea>
+                    <textarea id="cairo_program" class="codeEditor active"></textarea>
                 </div>
                 <div class="toolbar">
                     <button id="Compile" onclick="ClickFunc()">Compile</button>
                     <button id="Run" onclick="runFunc()">Run</button>
                     <input type="file" id="file-input" style="display: none" />
-                    <button id="open-file-button">Open File</button>
+                    <button id="open-file-button" class="file-button">Open File</button>
+                    <button id="save-file-button" class="file-button">Save source code</button>
+                    
                 </div>
                 <div class="tab">
-                    <button class="tablink active" onclick="openTab(event, 'CompileResult')">Compile Result</button>
-                    <button class="tablink" onclick="openTab(event, 'RunResult')">Output</button>
+                    <div class="tab-buttons">
+                        <button class="tablink active" onclick="openTab(event, 'CompileResult')">Compile Result</button>
+                        <button class="tablink" onclick="openTab(event, 'RunResult')">Output</button>
+                    </div>
+                    <button id="save-compiled-file-button" class="file-button tab-right">Save compiled file</button>
                 </div>
                 <div id="CompileResult" class="tabcontent">
                     <textarea readonly id="sierra_program"
-                        class="console">Compile Result will be shown here...</textarea>
+                        class="console"></textarea>
                 </div>
                 <div id="RunResult" class="tabcontent" style="display: none;">
                     <textarea readonly id="run_result" class="console">No output.</textarea>

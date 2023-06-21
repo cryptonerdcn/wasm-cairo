@@ -134,3 +134,60 @@ const getActiveTextArea = () => {
     // Return null if no such textarea is found
     return null;
 }
+
+window.saveFileFunc = async () => {
+    const textarea = document.querySelector('.codeEditor.active');
+    if(textarea.value == "") {
+        return;
+    }
+    const options = {
+        suggestedName: 'astro.cairo',
+        types: [{
+            description: 'Cairo File',
+            accept: { 'text/plain': ['.cairo'] },
+        }],
+    };
+    const fileHandle = await window.showSaveFilePicker(options);
+    const writable = await fileHandle.createWritable();
+    await writable.write(textarea.value);
+    await writable.close();
+    alert("File has been saved.");
+}
+
+// Attach the function to the save button
+document.getElementById("save-file-button").addEventListener("click", saveFileFunc);
+
+// Save the compiled file
+window.saveCompiledFileFunc = async () => {
+    const textarea = document.getElementById('sierra_program');
+    if(textarea.value == "") {
+        return;
+    }
+    const options = {
+        suggestedName: 'astro_compiled.json',
+        types: [{
+            description: 'JSON File',
+            accept: { 'text/plain': ['.json'] },
+        }],
+    };
+    const fileHandle = await window.showSaveFilePicker(options);
+    const writable = await fileHandle.createWritable();
+    await writable.write(textarea.value);
+    await writable.close();
+    alert("File has been saved.");
+}
+
+// Attach the function to the save button
+document.getElementById("save-compiled-file-button").addEventListener("click", saveCompiledFileFunc);
+
+// Load the default cairo program
+window.addEventListener('DOMContentLoaded', (event) => {
+    fetch('HelloStarknetAstro.cairo')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('cairo_program').value = data;
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+});
