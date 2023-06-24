@@ -2331,10 +2331,12 @@ dependencies = [
 name = "wasm-cairo"
 version = "0.1.0"
 dependencies = [
+ "anyhow",
  "cairo-lang-compiler",
  "cairo-lang-runner",
  "cairo-lang-starknet",
  "cairo-vm 0.6.0",
+ "clap",
  "console_error_panic_hook",
  "parking_lot_core 0.8.0",
  "rust-embed",
