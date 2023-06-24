@@ -47,16 +47,22 @@ cargo build --target wasm32-wasi --release
 
 You can test it by using: 
 
-```
-wasmtime target/wasm32-wasi/release/wasm-cairo.wasm -- --command compileCairoProgram --input-program-string "fn run_tests() {assert(bool::True(()), 1);}"
-```
-
-Or just
+Compile Cairo
 
 ```
-./wasmtime_test.sh
+./wasmtime_test.sh compileCairoProgram test.cairo test.sierra"
 ```
 
+Run
+```
+./wasmtime_test.sh runCairoProgram test.cairo output"
+```
+
+Compile Contract
+
+```
+./wasmtime_test.sh compileStarknetContract test_contract.cairo test.json"
+```
 
 ## 🔋 Batteries Included
 
