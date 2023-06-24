@@ -1,34 +1,12 @@
 <div align="center">
 
-  <h1><code>wasm-pack-template</code></h1>
+  <h1><code>WASM-Cairo</code></h1>
 
-  <strong>A template for kick starting a Rust and WebAssembly project using <a href="https://github.com/rustwasm/wasm-pack">wasm-pack</a>.</strong>
+  <strong>A suite of development tools and an environment for Cairo 1.10, all based on WebAssembly.</strong>
 
-  <p>
-    <a href="https://travis-ci.org/rustwasm/wasm-pack-template"><img src="https://img.shields.io/travis/rustwasm/wasm-pack-template.svg?style=flat-square" alt="Build Status" /></a>
-  </p>
-
-  <h3>
-    <a href="https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html">Tutorial</a>
-    <span> | </span>
-    <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
-  </h3>
-
-  <sub>Built with 🦀🕸 by <a href="https://rustwasm.github.io/">The Rust and WebAssembly Working Group</a></sub>
+  <sub>Built with 🦀🕸 by <a href="https://twitter.com/cryptonerdcn">cryptonerdcn from Starknet Astro</a></sub>
 </div>
 
-## About
-
-[**📚 Read this template tutorial! 📚**][template-docs]
-
-This template is designed for compiling Rust libraries into WebAssembly and
-publishing the resulting package to NPM.
-
-Be sure to check out [other `wasm-pack` tutorials online][tutorials] for other
-templates and usages of `wasm-pack`.
-
-[tutorials]: https://rustwasm.github.io/docs/wasm-pack/tutorials/index.html
-[template-docs]: https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html
 
 ## 🚴 Usage
 
@@ -41,23 +19,31 @@ cargo generate --git https://github.com/rustwasm/wasm-pack-template.git --name m
 cd my-project
 ```
 
-### 🛠️ Build with `wasm-pack build`
+### 🛠️ Build WASM-bindgen's WASM-Cairo Toolkit 
+With Modules
 
 ```
-wasm-pack build
+wasm-pack build --release --target --out-dir ./pkg
 ```
 
-### 🔬 Test in Headless Browsers with `wasm-pack test`
+No Modules
 
 ```
-wasm-pack test --headless --firefox
+wasm-pack build --release --target no-modules --out-dir ./pkg
 ```
 
-### 🎁 Publish to NPM with `wasm-pack publish`
+
+### 🛠️ Build Astro Editor
 
 ```
-wasm-pack publish
+wasm-pack build --release --target no-modules --out-dir ./dist/pkg --out-name wasm-cairo
 ```
+
+Then run 
+```
+node app.js
+```
+For local web instance.
 
 ## 🔋 Batteries Included
 
@@ -74,7 +60,6 @@ wasm-pack publish
 Licensed under either of
 
 * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
-* MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
 
 at your option.
 

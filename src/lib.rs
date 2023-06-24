@@ -1,7 +1,7 @@
 mod utils;
 use std::path::Path;
 
-use cairo_lang_compiler::{compile_cairo_project_with_input_string, SierraProgram, CompilerConfig};
+use cairo_lang_compiler::{compile_cairo_project_with_input_string, CompilerConfig};
 use cairo_lang_runner::run_with_input_program_string;
 use cairo_lang_starknet::contract_class::starknet_wasm_compile_with_input_string;
 use rust_embed::RustEmbed;
