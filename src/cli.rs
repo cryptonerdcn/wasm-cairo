@@ -56,11 +56,9 @@ fn compile_cairo_program1(cairo_program: String, replace_ids: bool) -> Result<St
     });
     let sierra_program_str = match sierra_program {
         Ok(sierra_program) => {
-            println!("sierra_program is Ok");
             sierra_program.to_string()
         }
         Err(e) => {
-            println!("sierra_program is Err");
             println!("{}", e.to_string());
             e.to_string()
         }

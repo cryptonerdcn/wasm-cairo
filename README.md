@@ -10,14 +10,6 @@
 
 ## 🚴 Usage
 
-### 🐑 Use `cargo generate` to Clone this Template
-
-[Learn more about `cargo generate` here.](https://github.com/ashleygwilliams/cargo-generate)
-
-```
-cargo generate --git https://github.com/rustwasm/wasm-pack-template.git --name my-project
-cd my-project
-```
 
 ### 🛠️ Build WASM-bindgen's WASM-Cairo Toolkit 
 With Modules
@@ -44,6 +36,25 @@ Then run
 node app.js
 ```
 For local web instance.
+
+### 🛠️ Build WASMTIME's WASM-Cairo Toolkit
+
+```
+cargo build --target wasm32-wasi --release
+```
+
+You can test it by using: 
+
+```
+wasmtime target/wasm32-wasi/release/wasm-cairo.wasm -- --command compileCairoProgram --input-program-string "fn run_tests() {assert(bool::True(()), 1);}"
+```
+
+Or just
+
+```
+./wasmtime_test.sh
+```
+
 
 ## 🔋 Batteries Included
 
