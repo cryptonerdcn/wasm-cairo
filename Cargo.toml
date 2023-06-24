@@ -17,6 +17,7 @@ rust-embed = "6.7.0"
 cairo-lang-starknet = { package = "cairo-lang-starknet", git = "https://github.com/cryptonerdcn/cairo.git", rev = "34ad227573d97ae43f0497ef62fba9ede08c69df"}
 cairo-lang-compiler = { package = "cairo-lang-compiler", git = "https://github.com/cryptonerdcn/cairo.git", rev = "34ad227573d97ae43f0497ef62fba9ede08c69df"}
 cairo-lang-runner = { package = "cairo-lang-runner", git = "https://github.com/cryptonerdcn/cairo.git", rev = "34ad227573d97ae43f0497ef62fba9ede08c69df", features = ["alloc"], default-features = false}
+cairo-vm-new = { package = "cairo-vm", git = "https://github.com/lambdaclass/cairo-rs.git", rev = "e762069c348029b6234937855cbbcc0b0be4fb24", default-features = false}
 
 
 # The `console_error_panic_hook` crate provides better debugging of panics by
