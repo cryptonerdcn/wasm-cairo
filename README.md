@@ -24,6 +24,8 @@ No Modules
 wasm-pack build --release --target no-modules --out-dir ./pkg
 ```
 
+You will find `wasm-cairo_bg.wasm` and `wasm-cairo.js` in `pkg` folder.
+
 
 ### 🛠️ Build Astro Editor
 
@@ -64,15 +66,12 @@ Or just
   for logging panic messages to the developer console.
 * [`wee_alloc`](https://github.com/rustwasm/wee_alloc), an allocator optimized
   for small code size.
+* [`Cairo`](https://github.com/starkware-libs/cairo) for Cairo-lang support.
 * `LICENSE-APACHE` and `LICENSE-MIT`: most Rust projects are licensed this way, so these are included for you
 
 ## License
 
-Licensed under either of
-
 * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
-
-at your option.
 
 ### Contribution
 
