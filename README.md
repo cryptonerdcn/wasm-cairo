@@ -50,18 +50,18 @@ You can test it by using:
 Compile Cairo
 
 ```
-./wasmtime_test.sh compileCairoProgram test.cairo test.sierra"
+./wasmtime_test.sh compileCairoProgram ./cairo_files/HelloStarknetAstro.cairo ./cairo_files/HelloStarknetAstro.sierra
 ```
 
 Run
 ```
-./wasmtime_test.sh runCairoProgram test.cairo output"
+./wasmtime_test.sh runCairoProgram ./cairo_files/HelloStarknetAstro.cairo
 ```
 
 Compile Contract
 
 ```
-./wasmtime_test.sh compileStarknetContract test_contract.cairo test.json"
+./wasmtime_test.sh compileStarknetContract ./cairo_files/erc20.cairo ./cairo_files/erc20.json
 ```
 
 ## 🔋 Batteries Included

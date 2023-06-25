@@ -87,7 +87,6 @@ fn compile_starknet_contract(starknet_contract: String, replace_ids: bool) -> Re
     let sierra_contract = starknet_wasm_compile_with_input_string(&starknet_contract, replace_ids, None, None, None);
     let sierra_contract_str = match sierra_contract {
         Ok(sierra_program) => {
-            
             sierra_program.to_string()
         }
         Err(e) => {
