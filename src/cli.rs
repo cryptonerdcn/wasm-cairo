@@ -1,11 +1,22 @@
 use anyhow::Error;
 use std::path::Path;
 use clap::Parser;
-use cairo_vm_new::without_std::result::Result::Ok;
 
 use cairo_lang_compiler::{compile_cairo_project_with_input_string, CompilerConfig};
 use cairo_lang_runner::run_with_input_program_string;
 use cairo_lang_starknet::contract_class::starknet_wasm_compile_with_input_string;
+
+use std::sync::Arc;
+
+use starknet_rs::{
+    accounts::{Account, SingleOwnerAccount},
+    core::{
+        chain_id,
+        types::{contract::SierraClass, BlockId, BlockTag, FieldElement},
+    },
+    providers::SequencerGatewayProvider,
+    signers::{LocalWallet, SigningKey},
+};
 /// Command line args parser.
 /// Exits with 0/1 if the input is formatted correctly/incorrectly.
 #[derive(Parser, Debug)]
@@ -96,4 +107,37 @@ fn compile_starknet_contract(starknet_contract: String, replace_ids: bool) -> Re
         }
     };
     Ok(sierra_contract_str)
+}
+
+async fn declare_v1(contract_json: String, class_hash: String) {
+    // Sierra class artifact. Output of the `starknet-compile` command
+    let contract_artifact: SierraClass =
+        serde_json::from_str(&contract_json).unwrap();
+
+    // Class hash of the compiled CASM class from the `starknet-sierra-compile` command
+    let compiled_class_hash =
+        FieldElement::from_hex_be(&class_hash).unwrap();
+
+    let provider = SequencerGatewayProvider::starknet_alpha_goerli();
+    let signer = LocalWallet::from(SigningKey::from_secret_scalar(
+        FieldElement::from_hex_be("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff").unwrap(),
+    ));
+    let address = FieldElement::from_hex_be("02da37a17affbd2df4ede7120dae305ec36dfe94ec96a8c3f49bbf59f4e9a9fa").unwrap();
+
+    let mut account = SingleOwnerAccount::new(provider, signer, address, chain_id::TESTNET);
+
+    // `SingleOwnerAccount` defaults to checking nonce and estimating fees against the latest
+    // block. Optionally change the target block to pending with the following line:
+    account.set_block_id(BlockId::Tag(BlockTag::Pending));
+
+    // We need to flatten the ABI into a string first
+    let flattened_class = contract_artifact.flatten().unwrap();
+
+    let result = account
+        .declare(Arc::new(flattened_class), compiled_class_hash)
+        .send()
+        .await
+        .unwrap();
+
+    dbg!(result);
 }

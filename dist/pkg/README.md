@@ -1,62 +1,67 @@
 <div align="center">
 
-  <h1><code>wasm-pack-template</code></h1>
+  <h1><code>WASM-Cairo</code></h1>
 
-  <strong>A template for kick starting a Rust and WebAssembly project using <a href="https://github.com/rustwasm/wasm-pack">wasm-pack</a>.</strong>
+  <strong>A suite of development tools and an environment for Cairo 1.10, all based on WebAssembly.</strong>
 
-  <p>
-    <a href="https://travis-ci.org/rustwasm/wasm-pack-template"><img src="https://img.shields.io/travis/rustwasm/wasm-pack-template.svg?style=flat-square" alt="Build Status" /></a>
-  </p>
-
-  <h3>
-    <a href="https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html">Tutorial</a>
-    <span> | </span>
-    <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
-  </h3>
-
-  <sub>Built with 🦀🕸 by <a href="https://rustwasm.github.io/">The Rust and WebAssembly Working Group</a></sub>
+  <sub>Built with 🦀🕸 by <a href="https://twitter.com/cryptonerdcn">cryptonerdcn from Starknet Astro</a></sub>
 </div>
 
-## About
-
-[**📚 Read this template tutorial! 📚**][template-docs]
-
-This template is designed for compiling Rust libraries into WebAssembly and
-publishing the resulting package to NPM.
-
-Be sure to check out [other `wasm-pack` tutorials online][tutorials] for other
-templates and usages of `wasm-pack`.
-
-[tutorials]: https://rustwasm.github.io/docs/wasm-pack/tutorials/index.html
-[template-docs]: https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html
 
 ## 🚴 Usage
 
-### 🐑 Use `cargo generate` to Clone this Template
 
-[Learn more about `cargo generate` here.](https://github.com/ashleygwilliams/cargo-generate)
-
-```
-cargo generate --git https://github.com/rustwasm/wasm-pack-template.git --name my-project
-cd my-project
-```
-
-### 🛠️ Build with `wasm-pack build`
+### 🛠️ Build WASM-bindgen's WASM-Cairo Toolkit 
+With Modules
 
 ```
-wasm-pack build
+wasm-pack build --release --target --out-dir ./pkg
 ```
 
-### 🔬 Test in Headless Browsers with `wasm-pack test`
+No Modules
 
 ```
-wasm-pack test --headless --firefox
+wasm-pack build --release --target no-modules --out-dir ./pkg
 ```
 
-### 🎁 Publish to NPM with `wasm-pack publish`
+You will find `wasm-cairo_bg.wasm` and `wasm-cairo.js` in `pkg` folder.
+
+
+### 🛠️ Build Astro Editor
 
 ```
-wasm-pack publish
+wasm-pack build --release --target no-modules --out-dir ./dist/pkg --out-name wasm-cairo
+```
+
+Then run 
+```
+node app.js
+```
+For local web instance.
+
+### 🛠️ Build WASMTIME's WASM-Cairo Toolkit
+
+```
+cargo build --target wasm32-wasi --release
+```
+
+You can test it by using: 
+
+Compile Cairo
+
+```
+./wasmtime_test.sh compileCairoProgram ./cairo_files/HelloStarknetAstro.cairo ./cairo_files/HelloStarknetAstro.sierra
+```
+
+Run
+```
+./wasmtime_test.sh runCairoProgram ./cairo_files/HelloStarknetAstro.cairo
+```
+
+Compile Contract
+
+```
+./wasmtime_test.sh compileStarknetContract ./cairo_files/erc20.cairo ./cairo_files/erc20.json
 ```
 
 ## 🔋 Batteries Included
@@ -67,16 +72,12 @@ wasm-pack publish
   for logging panic messages to the developer console.
 * [`wee_alloc`](https://github.com/rustwasm/wee_alloc), an allocator optimized
   for small code size.
+* [`Cairo`](https://github.com/starkware-libs/cairo) for Cairo-lang support.
 * `LICENSE-APACHE` and `LICENSE-MIT`: most Rust projects are licensed this way, so these are included for you
 
 ## License
 
-Licensed under either of
-
 * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
-* MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
-
-at your option.
 
 ### Contribution
 
