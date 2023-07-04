@@ -34,9 +34,12 @@ struct Args {
     /// Input cairo program string
     #[arg(long)]
     input_program_string: Option<String>,
+    #[arg(long)]
+    class_hash: Option<String>,
 }
 
-pub fn main() -> anyhow::Result<()> {
+#[tokio::main]
+async fn main() -> anyhow::Result<()> {
     let args: Args = Args::parse();
     let command = args.command;
     match command.as_ref() {
@@ -51,6 +54,14 @@ pub fn main() -> anyhow::Result<()> {
         "compileStarknetContract" => {
             let sierra_contract_str = compile_starknet_contract(args.input_program_string.unwrap(), true);
             println!("{}", sierra_contract_str.unwrap());
+        }
+        // match declareContract
+        // 1. contract_json: String
+        // 2. class_hash: String
+        "dedeclareContract" => {
+            let contract_json = args.input_program_string.unwrap();
+            let class_hash = args.class_hash.unwrap();
+            declare_v1(contract_json, class_hash).await;
         }
         _ => {
             println!("Unknown command: {}", command);
