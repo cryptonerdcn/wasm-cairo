@@ -1,10 +1,9 @@
 use anyhow::Error;
 use std::path::Path;
 use clap::Parser;
-use cairo_vm_new::without_std::result::Result::Ok;
 
 use cairo_lang_compiler::{compile_cairo_project_with_input_string, CompilerConfig};
-use cairo_lang_runner::run_with_input_program_string;
+// use cairo_lang_runner::run_with_input_program_string;
 use cairo_lang_starknet::contract_class::starknet_wasm_compile_with_input_string;
 /// Command line args parser.
 /// Exits with 0/1 if the input is formatted correctly/incorrectly.
@@ -34,8 +33,8 @@ pub fn main() -> anyhow::Result<()> {
             println!("{}", sierra_program_str.unwrap());
         }
         "runCairoProgram" => {
-            let cairo_program_result_str = run_cairo_program(args.input_program_string.unwrap(), None, true, true);
-            println!("{}", cairo_program_result_str.unwrap());
+            //let cairo_program_result_str = run_cairo_program(args.input_program_string.unwrap(), None, true, true);
+            //println!("{}", cairo_program_result_str.unwrap());
         }
         "compileStarknetContract" => {
             let sierra_contract_str = compile_starknet_contract(args.input_program_string.unwrap(), true);
@@ -66,7 +65,7 @@ fn compile_cairo_program(cairo_program: String, replace_ids: bool) -> Result<Str
     Ok(sierra_program_str)
 }
 
-fn run_cairo_program(cairo_program: String, available_gas: Option<usize>, print_full_memory: bool, use_dbg_print_hint: bool) -> Result<String, Error> {
+/*fn run_cairo_program(cairo_program: String, available_gas: Option<usize>, print_full_memory: bool, use_dbg_print_hint: bool) -> Result<String, Error> {
 
     let cairo_program_result = run_with_input_program_string(&cairo_program, available_gas, print_full_memory, use_dbg_print_hint);
     let cairo_program_result_str = match cairo_program_result {
@@ -81,7 +80,7 @@ fn run_cairo_program(cairo_program: String, available_gas: Option<usize>, print_
         }
     };
     Ok(cairo_program_result_str)
-}
+}*/
 
 fn compile_starknet_contract(starknet_contract: String, replace_ids: bool) -> Result<String, Error> {
     let sierra_contract = starknet_wasm_compile_with_input_string(&starknet_contract, replace_ids, None, None, None);
