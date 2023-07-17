@@ -2,9 +2,9 @@ use anyhow::Error;
 use std::path::Path;
 use clap::Parser;
 
-use cairo_lang_compiler::{compile_cairo_project_with_input_string, CompilerConfig};
-// use cairo_lang_runner::run_with_input_program_string;
-use cairo_lang_starknet::contract_class::starknet_wasm_compile_with_input_string;
+use cairo_lang_compiler::{CompilerConfig, wasm_cairo_interface::compile_cairo_project_with_input_string};
+//use cairo_lang_runner::run_with_input_program_string;
+use cairo_lang_starknet::wasm_cairo_interface::starknet_wasm_compile_with_input_string;
 /// Command line args parser.
 /// Exits with 0/1 if the input is formatted correctly/incorrectly.
 #[derive(Parser, Debug)]
