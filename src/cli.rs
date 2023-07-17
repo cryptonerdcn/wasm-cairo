@@ -1,9 +1,11 @@
 use anyhow::Error;
-use std::path::Path;
 use clap::Parser;
+use std::path::Path;
 
-use cairo_lang_compiler::{CompilerConfig, wasm_cairo_interface::compile_cairo_project_with_input_string};
-//use cairo_lang_runner::run_with_input_program_string;
+use cairo_lang_compiler::{
+    wasm_cairo_interface::compile_cairo_project_with_input_string, CompilerConfig,
+};
+use cairo_lang_runner::wasm_cairo_interface::run_with_input_program_string;
 use cairo_lang_starknet::wasm_cairo_interface::starknet_wasm_compile_with_input_string;
 /// Command line args parser.
 /// Exits with 0/1 if the input is formatted correctly/incorrectly.
@@ -29,68 +31,79 @@ pub fn main() -> anyhow::Result<()> {
     let command = args.command;
     match command.as_ref() {
         "compileCairoProgram" => {
-            let sierra_program_str = compile_cairo_program(args.input_program_string.unwrap(), true);
+            let sierra_program_str =
+                compile_cairo_program(args.input_program_string.unwrap(), true);
             println!("{}", sierra_program_str.unwrap());
         }
         "runCairoProgram" => {
-            //let cairo_program_result_str = run_cairo_program(args.input_program_string.unwrap(), None, true, true);
-            //println!("{}", cairo_program_result_str.unwrap());
+            let cairo_program_result_str =
+                run_cairo_program(args.input_program_string.unwrap(), None, true, true);
+            println!("{}", cairo_program_result_str.unwrap());
         }
         "compileStarknetContract" => {
-            let sierra_contract_str = compile_starknet_contract(args.input_program_string.unwrap(), true);
+            let sierra_contract_str =
+                compile_starknet_contract(args.input_program_string.unwrap(), true);
             println!("{}", sierra_contract_str.unwrap());
         }
         _ => {
             println!("Unknown command: {}", command);
         }
     }
-    
+
     Ok(())
 }
 
 fn compile_cairo_program(cairo_program: String, replace_ids: bool) -> Result<String, Error> {
-    let sierra_program = compile_cairo_project_with_input_string(Path::new("./test123.cairo"), &cairo_program, CompilerConfig {
-        replace_ids: replace_ids,
-        ..CompilerConfig::default()
-    });
+    let sierra_program = compile_cairo_project_with_input_string(
+        Path::new("./astro.cairo"),
+        &cairo_program,
+        CompilerConfig {
+            replace_ids: replace_ids,
+            ..CompilerConfig::default()
+        },
+    );
     let sierra_program_str = match sierra_program {
-        Ok(sierra_program) => {
-            sierra_program.to_string()
-        }
+        Ok(sierra_program) => sierra_program.to_string(),
         Err(e) => {
-            println!("{}", e.to_string());
+            // println!("{}", e.to_string());
             e.to_string()
         }
     };
     Ok(sierra_program_str)
 }
 
-/*fn run_cairo_program(cairo_program: String, available_gas: Option<usize>, print_full_memory: bool, use_dbg_print_hint: bool) -> Result<String, Error> {
-
-    let cairo_program_result = run_with_input_program_string(&cairo_program, available_gas, print_full_memory, use_dbg_print_hint);
+fn run_cairo_program(
+    cairo_program: String,
+    available_gas: Option<usize>,
+    print_full_memory: bool,
+    use_dbg_print_hint: bool,
+) -> Result<String, Error> {
+    let cairo_program_result = run_with_input_program_string(
+        &cairo_program,
+        available_gas,
+        print_full_memory,
+        use_dbg_print_hint,
+    );
     let cairo_program_result_str = match cairo_program_result {
-        Ok(cairo_program_result_str) => {
-            
-            cairo_program_result_str
-        }
+        Ok(cairo_program_result_str) => cairo_program_result_str,
         Err(e) => {
-            
-            println!("{}", e.to_string().as_str());
+            // println!("{}", e.to_string().as_str());
             e.to_string()
         }
     };
     Ok(cairo_program_result_str)
-}*/
+}
 
-fn compile_starknet_contract(starknet_contract: String, replace_ids: bool) -> Result<String, Error> {
-    let sierra_contract = starknet_wasm_compile_with_input_string(&starknet_contract, replace_ids, None, None, None);
+fn compile_starknet_contract(
+    starknet_contract: String,
+    replace_ids: bool,
+) -> Result<String, Error> {
+    let sierra_contract =
+        starknet_wasm_compile_with_input_string(&starknet_contract, replace_ids, None, None, None);
     let sierra_contract_str = match sierra_contract {
-        Ok(sierra_program) => {
-            sierra_program.to_string()
-        }
+        Ok(sierra_program) => sierra_program.to_string(),
         Err(e) => {
-            
-            println!("{}", e.to_string().as_str());
+            // println!("{}", e.to_string().as_str());
             e.to_string()
         }
     };

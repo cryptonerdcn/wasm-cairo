@@ -2,7 +2,7 @@ mod utils;
 use std::path::Path;
 
 use cairo_lang_compiler::{CompilerConfig, wasm_cairo_interface::compile_cairo_project_with_input_string};
-//use cairo_lang_runner::run_with_input_program_string;
+use cairo_lang_runner::wasm_cairo_interface::run_with_input_program_string;
 use cairo_lang_starknet::wasm_cairo_interface::starknet_wasm_compile_with_input_string;
 use rust_embed::RustEmbed;
 
@@ -49,7 +49,7 @@ pub fn compile_cairo_program(cairo_program: String, replace_ids: bool) -> Result
     Ok(sierra_program_str)
 }
 
-/*#[wasm_bindgen(js_name = runCairoProgram)]
+#[wasm_bindgen(js_name = runCairoProgram)]
 pub fn run_cairo_program(cairo_program: String, available_gas: Option<usize>, print_full_memory: bool, use_dbg_print_hint: bool) -> Result<String, JsError> {
 
     let cairo_program_result = run_with_input_program_string(&cairo_program, available_gas, print_full_memory, use_dbg_print_hint);
@@ -65,7 +65,7 @@ pub fn run_cairo_program(cairo_program: String, available_gas: Option<usize>, pr
         }
     };
     Ok(cairo_program_result_str)
-}*/
+}
 
 #[wasm_bindgen(js_name = compileStarknetContract)]
 pub fn compile_starknet_contract(starknet_contract: String, replace_ids: bool) -> Result<String, JsError> {
