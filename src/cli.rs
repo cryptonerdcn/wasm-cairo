@@ -78,10 +78,13 @@ fn run_cairo_program(
     print_full_memory: bool,
     use_dbg_print_hint: bool,
 ) -> Result<String, Error> {
+    // TODO: Add support for run_profiler and allow_warnings
     let cairo_program_result = run_with_input_program_string(
         &cairo_program,
         available_gas,
+        false,
         print_full_memory,
+        false,
         use_dbg_print_hint,
     );
     let cairo_program_result_str = match cairo_program_result {
@@ -98,8 +101,9 @@ fn compile_starknet_contract(
     starknet_contract: String,
     replace_ids: bool,
 ) -> Result<String, Error> {
+    // TODO: Add support for allow_warnings
     let sierra_contract =
-        starknet_wasm_compile_with_input_string(&starknet_contract, replace_ids, None, None, None);
+        starknet_wasm_compile_with_input_string(&starknet_contract, false, replace_ids, None, None, None);
     let sierra_contract_str = match sierra_contract {
         Ok(sierra_program) => sierra_program.to_string(),
         Err(e) => {

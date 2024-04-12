@@ -1,6 +1,6 @@
 {
   "name": "wasm-cairo",
-  "version": "1.0.0",
+  "version": "1.9.3",
   "description": "Wasm of Cairo compiler.",
   "main": "index.js",
   "scripts": {
