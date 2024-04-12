@@ -1,0 +1,1298 @@
+type Array<bytes31> = Array<bytes31> [storable: true, drop: true, dup: false, zero_sized: false];
+type felt252 = felt252 [storable: true, drop: true, dup: true, zero_sized: false];
+type u32 = u32 [storable: true, drop: true, dup: true, zero_sized: false];
+type core::byte_array::ByteArray = Struct<ut@core::byte_array::ByteArray, Array<bytes31>, felt252, u32> [storable: true, drop: true, dup: false, zero_sized: false];
+type Uninitialized<core::byte_array::ByteArray> = Uninitialized<core::byte_array::ByteArray> [storable: false, drop: true, dup: false, zero_sized: false];
+type Const<felt252, 573087285299505011920718992710461799> = Const<felt252, 573087285299505011920718992710461799> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<u128, 1329227995784915872903807060280344576> = Const<u128, 1329227995784915872903807060280344576> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<u128, 5192296858534827628530496329220096> = Const<u128, 5192296858534827628530496329220096> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<u128, 20282409603651670423947251286016> = Const<u128, 20282409603651670423947251286016> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<u128, 79228162514264337593543950336> = Const<u128, 79228162514264337593543950336> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<u128, 309485009821345068724781056> = Const<u128, 309485009821345068724781056> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<u128, 1208925819614629174706176> = Const<u128, 1208925819614629174706176> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<u128, 4722366482869645213696> = Const<u128, 4722366482869645213696> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<u128, 18446744073709551616> = Const<u128, 18446744073709551616> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<u128, 72057594037927936> = Const<u128, 72057594037927936> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<u128, 281474976710656> = Const<u128, 281474976710656> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<u128, 1099511627776> = Const<u128, 1099511627776> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<u128, 4294967296> = Const<u128, 4294967296> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<u128, 16777216> = Const<u128, 16777216> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<u128, 65536> = Const<u128, 65536> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<u128, 256> = Const<u128, 256> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<u128, 1> = Const<u128, 1> [storable: false, drop: false, dup: false, zero_sized: false];
+type Unit = Struct<ut@Tuple> [storable: true, drop: true, dup: true, zero_sized: true];
+type index_enum_type<16> = Enum<ut@index_enum_type<16>, Unit, Unit, Unit, Unit, Unit, Unit, Unit, Unit, Unit, Unit, Unit, Unit, Unit, Unit, Unit, Unit> [storable: true, drop: true, dup: true, zero_sized: false];
+type BoundedInt<0, 15> = BoundedInt<0, 15> [storable: true, drop: true, dup: true, zero_sized: false];
+type Const<felt252, 375233589013918064796019> = Const<felt252, 375233589013918064796019> [storable: false, drop: false, dup: false, zero_sized: false];
+type Box<bytes31> = Box<bytes31> [storable: true, drop: true, dup: true, zero_sized: false];
+type core::option::Option::<core::box::Box::<@core::bytes_31::bytes31>> = Enum<ut@core::option::Option::<core::box::Box::<@core::bytes_31::bytes31>>, Box<bytes31>, Unit> [storable: true, drop: true, dup: true, zero_sized: false];
+type Const<felt252, 155785504323917466144735657540098748279> = Const<felt252, 155785504323917466144735657540098748279> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<felt252, 155785504329508738615720351733824384887> = Const<felt252, 155785504329508738615720351733824384887> [storable: false, drop: false, dup: false, zero_sized: false];
+type core::panics::Panic = Struct<ut@core::panics::Panic> [storable: true, drop: true, dup: true, zero_sized: true];
+type Const<felt252, 340282366920938463463374607431768211456> = Const<felt252, 340282366920938463463374607431768211456> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<felt252, 29721761890975875353235833581453094220424382983267374> = Const<felt252, 29721761890975875353235833581453094220424382983267374> [storable: false, drop: false, dup: false, zero_sized: false];
+type u128 = u128 [storable: true, drop: true, dup: true, zero_sized: false];
+type NonZero<u128> = NonZero<u128> [storable: true, drop: true, dup: true, zero_sized: false];
+type Tuple<u128> = Struct<ut@Tuple, u128> [storable: true, drop: true, dup: true, zero_sized: false];
+type Array<felt252> = Array<felt252> [storable: true, drop: true, dup: false, zero_sized: false];
+type Tuple<core::panics::Panic, Array<felt252>> = Struct<ut@Tuple, core::panics::Panic, Array<felt252>> [storable: true, drop: true, dup: false, zero_sized: false];
+type core::panics::PanicResult::<(core::integer::u128,)> = Enum<ut@core::panics::PanicResult::<(core::integer::u128,)>, Tuple<u128>, Tuple<core::panics::Panic, Array<felt252>>> [storable: true, drop: true, dup: false, zero_sized: false];
+type Const<u128, 0> = Const<u128, 0> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<u32, 16> = Const<u32, 16> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<u32, 31> = Const<u32, 31> [storable: false, drop: false, dup: false, zero_sized: false];
+type Tuple<Unit> = Struct<ut@Tuple, Unit> [storable: true, drop: true, dup: true, zero_sized: true];
+type core::panics::PanicResult::<((),)> = Enum<ut@core::panics::PanicResult::<((),)>, Tuple<Unit>, Tuple<core::panics::Panic, Array<felt252>>> [storable: true, drop: true, dup: false, zero_sized: false];
+type Tuple<Array<felt252>, Unit> = Struct<ut@Tuple, Array<felt252>, Unit> [storable: true, drop: true, dup: false, zero_sized: false];
+type core::panics::PanicResult::<(core::array::Array::<core::felt252>, ())> = Enum<ut@core::panics::PanicResult::<(core::array::Array::<core::felt252>, ())>, Tuple<Array<felt252>, Unit>, Tuple<core::panics::Panic, Array<felt252>>> [storable: true, drop: true, dup: false, zero_sized: false];
+type GasBuiltin = GasBuiltin [storable: true, drop: false, dup: false, zero_sized: false];
+type Snapshot<Array<bytes31>> = Snapshot<Array<bytes31>> [storable: true, drop: true, dup: true, zero_sized: false];
+type core::array::Span::<core::bytes_31::bytes31> = Struct<ut@core::array::Span::<core::bytes_31::bytes31>, Snapshot<Array<bytes31>>> [storable: true, drop: true, dup: true, zero_sized: false];
+type Snapshot<core::byte_array::ByteArray> = Snapshot<core::byte_array::ByteArray> [storable: true, drop: true, dup: true, zero_sized: false];
+type Const<felt252, 1997209042069643135709344952807065910992472029923670688473712229447419591075> = Const<felt252, 1997209042069643135709344952807065910992472029923670688473712229447419591075> [storable: false, drop: false, dup: false, zero_sized: false];
+type Tuple<core::byte_array::ByteArray, Unit> = Struct<ut@Tuple, core::byte_array::ByteArray, Unit> [storable: true, drop: true, dup: false, zero_sized: false];
+type core::panics::PanicResult::<(core::byte_array::ByteArray, ())> = Enum<ut@core::panics::PanicResult::<(core::byte_array::ByteArray, ())>, Tuple<core::byte_array::ByteArray, Unit>, Tuple<core::panics::Panic, Array<felt252>>> [storable: true, drop: true, dup: false, zero_sized: false];
+type RangeCheck = RangeCheck [storable: true, drop: false, dup: false, zero_sized: false];
+type Const<u32, 22> = Const<u32, 22> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<felt252, 27086628833821833330231700572948507801969048134033674> = Const<felt252, 27086628833821833330231700572948507801969048134033674> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<u32, 0> = Const<u32, 0> [storable: false, drop: false, dup: false, zero_sized: false];
+type Const<felt252, 0> = Const<felt252, 0> [storable: false, drop: false, dup: false, zero_sized: false];
+type bytes31 = bytes31 [storable: true, drop: true, dup: true, zero_sized: false];
+
+libfunc alloc_local<core::byte_array::ByteArray> = alloc_local<core::byte_array::ByteArray>;
+libfunc finalize_locals = finalize_locals;
+libfunc disable_ap_tracking = disable_ap_tracking;
+libfunc array_new<bytes31> = array_new<bytes31>;
+libfunc const_as_immediate<Const<felt252, 0>> = const_as_immediate<Const<felt252, 0>>;
+libfunc const_as_immediate<Const<u32, 0>> = const_as_immediate<Const<u32, 0>>;
+libfunc const_as_immediate<Const<felt252, 27086628833821833330231700572948507801969048134033674>> = const_as_immediate<Const<felt252, 27086628833821833330231700572948507801969048134033674>>;
+libfunc const_as_immediate<Const<u32, 22>> = const_as_immediate<Const<u32, 22>>;
+libfunc struct_construct<core::byte_array::ByteArray> = struct_construct<core::byte_array::ByteArray>;
+libfunc store_temp<RangeCheck> = store_temp<RangeCheck>;
+libfunc store_temp<core::byte_array::ByteArray> = store_temp<core::byte_array::ByteArray>;
+libfunc store_temp<felt252> = store_temp<felt252>;
+libfunc store_temp<u32> = store_temp<u32>;
+libfunc function_call<user@core::byte_array::ByteArrayImpl::append_word> = function_call<user@core::byte_array::ByteArrayImpl::append_word>;
+libfunc enum_match<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>> = enum_match<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>>;
+libfunc branch_align = branch_align;
+libfunc array_new<felt252> = array_new<felt252>;
+libfunc const_as_immediate<Const<felt252, 1997209042069643135709344952807065910992472029923670688473712229447419591075>> = const_as_immediate<Const<felt252, 1997209042069643135709344952807065910992472029923670688473712229447419591075>>;
+libfunc array_append<felt252> = array_append<felt252>;
+libfunc struct_deconstruct<Tuple<core::byte_array::ByteArray, Unit>> = struct_deconstruct<Tuple<core::byte_array::ByteArray, Unit>>;
+libfunc drop<Unit> = drop<Unit>;
+libfunc store_local<core::byte_array::ByteArray> = store_local<core::byte_array::ByteArray>;
+libfunc snapshot_take<core::byte_array::ByteArray> = snapshot_take<core::byte_array::ByteArray>;
+libfunc drop<core::byte_array::ByteArray> = drop<core::byte_array::ByteArray>;
+libfunc dup<Snapshot<core::byte_array::ByteArray>> = dup<Snapshot<core::byte_array::ByteArray>>;
+libfunc struct_snapshot_deconstruct<core::byte_array::ByteArray> = struct_snapshot_deconstruct<core::byte_array::ByteArray>;
+libfunc drop<felt252> = drop<felt252>;
+libfunc drop<u32> = drop<u32>;
+libfunc dup<Snapshot<Array<bytes31>>> = dup<Snapshot<Array<bytes31>>>;
+libfunc array_len<bytes31> = array_len<bytes31>;
+libfunc u32_to_felt252 = u32_to_felt252;
+libfunc struct_construct<core::array::Span::<core::bytes_31::bytes31>> = struct_construct<core::array::Span::<core::bytes_31::bytes31>>;
+libfunc store_temp<GasBuiltin> = store_temp<GasBuiltin>;
+libfunc store_temp<core::array::Span::<core::bytes_31::bytes31>> = store_temp<core::array::Span::<core::bytes_31::bytes31>>;
+libfunc store_temp<Array<felt252>> = store_temp<Array<felt252>>;
+libfunc function_call<user@core::array::serialize_array_helper::<core::bytes_31::bytes31, core::serde::into_felt252_based::SerdeImpl::<core::bytes_31::bytes31, core::bytes_31::bytes31Copy, core::bytes_31::Bytes31IntoFelt252, core::bytes_31::Felt252TryIntoBytes31>, core::bytes_31::bytes31Drop>> = function_call<user@core::array::serialize_array_helper::<core::bytes_31::bytes31, core::serde::into_felt252_based::SerdeImpl::<core::bytes_31::bytes31, core::bytes_31::bytes31Copy, core::bytes_31::Bytes31IntoFelt252, core::bytes_31::Felt252TryIntoBytes31>, core::bytes_31::bytes31Drop>>;
+libfunc enum_match<core::panics::PanicResult::<(core::array::Array::<core::felt252>, ())>> = enum_match<core::panics::PanicResult::<(core::array::Array::<core::felt252>, ())>>;
+libfunc struct_deconstruct<Tuple<Array<felt252>, Unit>> = struct_deconstruct<Tuple<Array<felt252>, Unit>>;
+libfunc drop<Snapshot<Array<bytes31>>> = drop<Snapshot<Array<bytes31>>>;
+libfunc rename<felt252> = rename<felt252>;
+libfunc rename<u32> = rename<u32>;
+libfunc print = print;
+libfunc struct_construct<Unit> = struct_construct<Unit>;
+libfunc struct_construct<Tuple<Unit>> = struct_construct<Tuple<Unit>>;
+libfunc enum_init<core::panics::PanicResult::<((),)>, 0> = enum_init<core::panics::PanicResult::<((),)>, 0>;
+libfunc store_temp<core::panics::PanicResult::<((),)>> = store_temp<core::panics::PanicResult::<((),)>>;
+libfunc drop<Snapshot<core::byte_array::ByteArray>> = drop<Snapshot<core::byte_array::ByteArray>>;
+libfunc enum_init<core::panics::PanicResult::<((),)>, 1> = enum_init<core::panics::PanicResult::<((),)>, 1>;
+libfunc drop<Uninitialized<core::byte_array::ByteArray>> = drop<Uninitialized<core::byte_array::ByteArray>>;
+libfunc dup<u32> = dup<u32>;
+libfunc u32_eq = u32_eq;
+libfunc struct_deconstruct<core::byte_array::ByteArray> = struct_deconstruct<core::byte_array::ByteArray>;
+libfunc u32_overflowing_add = u32_overflowing_add;
+libfunc const_as_immediate<Const<u32, 31>> = const_as_immediate<Const<u32, 31>>;
+libfunc u32_overflowing_sub = u32_overflowing_sub;
+libfunc const_as_immediate<Const<u32, 16>> = const_as_immediate<Const<u32, 16>>;
+libfunc u128s_from_felt252 = u128s_from_felt252;
+libfunc const_as_immediate<Const<u128, 0>> = const_as_immediate<Const<u128, 0>>;
+libfunc store_temp<u128> = store_temp<u128>;
+libfunc jump = jump;
+libfunc function_call<user@core::bytes_31::one_shift_left_bytes_u128> = function_call<user@core::bytes_31::one_shift_left_bytes_u128>;
+libfunc enum_match<core::panics::PanicResult::<(core::integer::u128,)>> = enum_match<core::panics::PanicResult::<(core::integer::u128,)>>;
+libfunc struct_deconstruct<Tuple<u128>> = struct_deconstruct<Tuple<u128>>;
+libfunc u128_is_zero = u128_is_zero;
+libfunc drop<Array<bytes31>> = drop<Array<bytes31>>;
+libfunc drop<u128> = drop<u128>;
+libfunc const_as_immediate<Const<felt252, 29721761890975875353235833581453094220424382983267374>> = const_as_immediate<Const<felt252, 29721761890975875353235833581453094220424382983267374>>;
+libfunc u128_safe_divmod = u128_safe_divmod;
+libfunc u128_to_felt252 = u128_to_felt252;
+libfunc const_as_immediate<Const<felt252, 340282366920938463463374607431768211456>> = const_as_immediate<Const<felt252, 340282366920938463463374607431768211456>>;
+libfunc felt252_mul = felt252_mul;
+libfunc felt252_add = felt252_add;
+libfunc struct_deconstruct<Tuple<core::panics::Panic, Array<felt252>>> = struct_deconstruct<Tuple<core::panics::Panic, Array<felt252>>>;
+libfunc drop<core::panics::Panic> = drop<core::panics::Panic>;
+libfunc const_as_immediate<Const<felt252, 155785504329508738615720351733824384887>> = const_as_immediate<Const<felt252, 155785504329508738615720351733824384887>>;
+libfunc bytes31_try_from_felt252 = bytes31_try_from_felt252;
+libfunc array_append<bytes31> = array_append<bytes31>;
+libfunc rename<RangeCheck> = rename<RangeCheck>;
+libfunc rename<Array<felt252>> = rename<Array<felt252>>;
+libfunc struct_construct<core::panics::Panic> = struct_construct<core::panics::Panic>;
+libfunc struct_construct<Tuple<core::panics::Panic, Array<felt252>>> = struct_construct<Tuple<core::panics::Panic, Array<felt252>>>;
+libfunc enum_init<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>, 1> = enum_init<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>, 1>;
+libfunc store_temp<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>> = store_temp<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>>;
+libfunc rename<core::byte_array::ByteArray> = rename<core::byte_array::ByteArray>;
+libfunc struct_construct<Tuple<core::byte_array::ByteArray, Unit>> = struct_construct<Tuple<core::byte_array::ByteArray, Unit>>;
+libfunc enum_init<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>, 0> = enum_init<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>, 0>;
+libfunc const_as_immediate<Const<felt252, 155785504323917466144735657540098748279>> = const_as_immediate<Const<felt252, 155785504323917466144735657540098748279>>;
+libfunc withdraw_gas = withdraw_gas;
+libfunc struct_deconstruct<core::array::Span::<core::bytes_31::bytes31>> = struct_deconstruct<core::array::Span::<core::bytes_31::bytes31>>;
+libfunc enable_ap_tracking = enable_ap_tracking;
+libfunc array_snapshot_pop_front<bytes31> = array_snapshot_pop_front<bytes31>;
+libfunc enum_init<core::option::Option::<core::box::Box::<@core::bytes_31::bytes31>>, 0> = enum_init<core::option::Option::<core::box::Box::<@core::bytes_31::bytes31>>, 0>;
+libfunc store_temp<Snapshot<Array<bytes31>>> = store_temp<Snapshot<Array<bytes31>>>;
+libfunc store_temp<core::option::Option::<core::box::Box::<@core::bytes_31::bytes31>>> = store_temp<core::option::Option::<core::box::Box::<@core::bytes_31::bytes31>>>;
+libfunc enum_init<core::option::Option::<core::box::Box::<@core::bytes_31::bytes31>>, 1> = enum_init<core::option::Option::<core::box::Box::<@core::bytes_31::bytes31>>, 1>;
+libfunc enum_match<core::option::Option::<core::box::Box::<@core::bytes_31::bytes31>>> = enum_match<core::option::Option::<core::box::Box::<@core::bytes_31::bytes31>>>;
+libfunc unbox<bytes31> = unbox<bytes31>;
+libfunc rename<bytes31> = rename<bytes31>;
+libfunc bytes31_to_felt252 = bytes31_to_felt252;
+libfunc struct_construct<Tuple<Array<felt252>, Unit>> = struct_construct<Tuple<Array<felt252>, Unit>>;
+libfunc enum_init<core::panics::PanicResult::<(core::array::Array::<core::felt252>, ())>, 0> = enum_init<core::panics::PanicResult::<(core::array::Array::<core::felt252>, ())>, 0>;
+libfunc store_temp<core::panics::PanicResult::<(core::array::Array::<core::felt252>, ())>> = store_temp<core::panics::PanicResult::<(core::array::Array::<core::felt252>, ())>>;
+libfunc drop<Array<felt252>> = drop<Array<felt252>>;
+libfunc drop<core::array::Span::<core::bytes_31::bytes31>> = drop<core::array::Span::<core::bytes_31::bytes31>>;
+libfunc const_as_immediate<Const<felt252, 375233589013918064796019>> = const_as_immediate<Const<felt252, 375233589013918064796019>>;
+libfunc enum_init<core::panics::PanicResult::<(core::array::Array::<core::felt252>, ())>, 1> = enum_init<core::panics::PanicResult::<(core::array::Array::<core::felt252>, ())>, 1>;
+libfunc downcast<u32, BoundedInt<0, 15>> = downcast<u32, BoundedInt<0, 15>>;
+libfunc enum_from_bounded_int<index_enum_type<16>> = enum_from_bounded_int<index_enum_type<16>>;
+libfunc store_temp<index_enum_type<16>> = store_temp<index_enum_type<16>>;
+libfunc enum_match<index_enum_type<16>> = enum_match<index_enum_type<16>>;
+libfunc const_as_immediate<Const<u128, 1>> = const_as_immediate<Const<u128, 1>>;
+libfunc const_as_immediate<Const<u128, 256>> = const_as_immediate<Const<u128, 256>>;
+libfunc const_as_immediate<Const<u128, 65536>> = const_as_immediate<Const<u128, 65536>>;
+libfunc const_as_immediate<Const<u128, 16777216>> = const_as_immediate<Const<u128, 16777216>>;
+libfunc const_as_immediate<Const<u128, 4294967296>> = const_as_immediate<Const<u128, 4294967296>>;
+libfunc const_as_immediate<Const<u128, 1099511627776>> = const_as_immediate<Const<u128, 1099511627776>>;
+libfunc const_as_immediate<Const<u128, 281474976710656>> = const_as_immediate<Const<u128, 281474976710656>>;
+libfunc const_as_immediate<Const<u128, 72057594037927936>> = const_as_immediate<Const<u128, 72057594037927936>>;
+libfunc const_as_immediate<Const<u128, 18446744073709551616>> = const_as_immediate<Const<u128, 18446744073709551616>>;
+libfunc const_as_immediate<Const<u128, 4722366482869645213696>> = const_as_immediate<Const<u128, 4722366482869645213696>>;
+libfunc const_as_immediate<Const<u128, 1208925819614629174706176>> = const_as_immediate<Const<u128, 1208925819614629174706176>>;
+libfunc const_as_immediate<Const<u128, 309485009821345068724781056>> = const_as_immediate<Const<u128, 309485009821345068724781056>>;
+libfunc const_as_immediate<Const<u128, 79228162514264337593543950336>> = const_as_immediate<Const<u128, 79228162514264337593543950336>>;
+libfunc const_as_immediate<Const<u128, 20282409603651670423947251286016>> = const_as_immediate<Const<u128, 20282409603651670423947251286016>>;
+libfunc const_as_immediate<Const<u128, 5192296858534827628530496329220096>> = const_as_immediate<Const<u128, 5192296858534827628530496329220096>>;
+libfunc const_as_immediate<Const<u128, 1329227995784915872903807060280344576>> = const_as_immediate<Const<u128, 1329227995784915872903807060280344576>>;
+libfunc struct_construct<Tuple<u128>> = struct_construct<Tuple<u128>>;
+libfunc enum_init<core::panics::PanicResult::<(core::integer::u128,)>, 0> = enum_init<core::panics::PanicResult::<(core::integer::u128,)>, 0>;
+libfunc store_temp<core::panics::PanicResult::<(core::integer::u128,)>> = store_temp<core::panics::PanicResult::<(core::integer::u128,)>>;
+libfunc const_as_immediate<Const<felt252, 573087285299505011920718992710461799>> = const_as_immediate<Const<felt252, 573087285299505011920718992710461799>>;
+libfunc enum_init<core::panics::PanicResult::<(core::integer::u128,)>, 1> = enum_init<core::panics::PanicResult::<(core::integer::u128,)>, 1>;
+
+alloc_local<core::byte_array::ByteArray>() -> ([3]); // 0
+finalize_locals() -> (); // 1
+disable_ap_tracking() -> (); // 2
+array_new<bytes31>() -> ([4]); // 3
+const_as_immediate<Const<felt252, 0>>() -> ([5]); // 4
+const_as_immediate<Const<u32, 0>>() -> ([6]); // 5
+const_as_immediate<Const<felt252, 27086628833821833330231700572948507801969048134033674>>() -> ([7]); // 6
+const_as_immediate<Const<u32, 22>>() -> ([8]); // 7
+struct_construct<core::byte_array::ByteArray>([4], [5], [6]) -> ([9]); // 8
+store_temp<RangeCheck>([0]) -> ([0]); // 9
+store_temp<core::byte_array::ByteArray>([9]) -> ([9]); // 10
+store_temp<felt252>([7]) -> ([7]); // 11
+store_temp<u32>([8]) -> ([8]); // 12
+function_call<user@core::byte_array::ByteArrayImpl::append_word>([0], [9], [7], [8]) -> ([10], [11]); // 13
+enum_match<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>>([11]) { fallthrough([12]) 72([13]) }; // 14
+branch_align() -> (); // 15
+array_new<felt252>() -> ([14]); // 16
+const_as_immediate<Const<felt252, 1997209042069643135709344952807065910992472029923670688473712229447419591075>>() -> ([15]); // 17
+store_temp<felt252>([15]) -> ([15]); // 18
+array_append<felt252>([14], [15]) -> ([16]); // 19
+struct_deconstruct<Tuple<core::byte_array::ByteArray, Unit>>([12]) -> ([2], [17]); // 20
+drop<Unit>([17]) -> (); // 21
+store_local<core::byte_array::ByteArray>([3], [2]) -> ([2]); // 22
+snapshot_take<core::byte_array::ByteArray>([2]) -> ([18], [19]); // 23
+drop<core::byte_array::ByteArray>([18]) -> (); // 24
+dup<Snapshot<core::byte_array::ByteArray>>([19]) -> ([19], [20]); // 25
+struct_snapshot_deconstruct<core::byte_array::ByteArray>([20]) -> ([21], [22], [23]); // 26
+drop<felt252>([22]) -> (); // 27
+drop<u32>([23]) -> (); // 28
+dup<Snapshot<Array<bytes31>>>([21]) -> ([21], [24]); // 29
+array_len<bytes31>([24]) -> ([25]); // 30
+u32_to_felt252([25]) -> ([26]); // 31
+store_temp<felt252>([26]) -> ([26]); // 32
+array_append<felt252>([16], [26]) -> ([27]); // 33
+struct_construct<core::array::Span::<core::bytes_31::bytes31>>([21]) -> ([28]); // 34
+store_temp<RangeCheck>([10]) -> ([10]); // 35
+store_temp<GasBuiltin>([1]) -> ([1]); // 36
+store_temp<core::array::Span::<core::bytes_31::bytes31>>([28]) -> ([28]); // 37
+store_temp<Array<felt252>>([27]) -> ([27]); // 38
+function_call<user@core::array::serialize_array_helper::<core::bytes_31::bytes31, core::serde::into_felt252_based::SerdeImpl::<core::bytes_31::bytes31, core::bytes_31::bytes31Copy, core::bytes_31::Bytes31IntoFelt252, core::bytes_31::Felt252TryIntoBytes31>, core::bytes_31::bytes31Drop>>([10], [1], [28], [27]) -> ([29], [30], [31]); // 39
+enum_match<core::panics::PanicResult::<(core::array::Array::<core::felt252>, ())>>([31]) { fallthrough([32]) 65([33]) }; // 40
+branch_align() -> (); // 41
+struct_deconstruct<Tuple<Array<felt252>, Unit>>([32]) -> ([34], [35]); // 42
+drop<Unit>([35]) -> (); // 43
+dup<Snapshot<core::byte_array::ByteArray>>([19]) -> ([19], [36]); // 44
+struct_snapshot_deconstruct<core::byte_array::ByteArray>([36]) -> ([37], [38], [39]); // 45
+drop<Snapshot<Array<bytes31>>>([37]) -> (); // 46
+drop<u32>([39]) -> (); // 47
+rename<felt252>([38]) -> ([40]); // 48
+array_append<felt252>([34], [40]) -> ([41]); // 49
+struct_snapshot_deconstruct<core::byte_array::ByteArray>([19]) -> ([42], [43], [44]); // 50
+drop<Snapshot<Array<bytes31>>>([42]) -> (); // 51
+drop<felt252>([43]) -> (); // 52
+rename<u32>([44]) -> ([45]); // 53
+u32_to_felt252([45]) -> ([46]); // 54
+array_append<felt252>([41], [46]) -> ([47]); // 55
+store_temp<Array<felt252>>([47]) -> ([47]); // 56
+print([47]) -> (); // 57
+struct_construct<Unit>() -> ([48]); // 58
+struct_construct<Tuple<Unit>>([48]) -> ([49]); // 59
+enum_init<core::panics::PanicResult::<((),)>, 0>([49]) -> ([50]); // 60
+store_temp<RangeCheck>([29]) -> ([29]); // 61
+store_temp<GasBuiltin>([30]) -> ([30]); // 62
+store_temp<core::panics::PanicResult::<((),)>>([50]) -> ([50]); // 63
+return([29], [30], [50]); // 64
+branch_align() -> (); // 65
+drop<Snapshot<core::byte_array::ByteArray>>([19]) -> (); // 66
+enum_init<core::panics::PanicResult::<((),)>, 1>([33]) -> ([51]); // 67
+store_temp<RangeCheck>([29]) -> ([29]); // 68
+store_temp<GasBuiltin>([30]) -> ([30]); // 69
+store_temp<core::panics::PanicResult::<((),)>>([51]) -> ([51]); // 70
+return([29], [30], [51]); // 71
+branch_align() -> (); // 72
+drop<Uninitialized<core::byte_array::ByteArray>>([3]) -> (); // 73
+enum_init<core::panics::PanicResult::<((),)>, 1>([13]) -> ([52]); // 74
+store_temp<RangeCheck>([10]) -> ([10]); // 75
+store_temp<GasBuiltin>([1]) -> ([1]); // 76
+store_temp<core::panics::PanicResult::<((),)>>([52]) -> ([52]); // 77
+return([10], [1], [52]); // 78
+const_as_immediate<Const<u32, 0>>() -> ([4]); // 79
+dup<u32>([3]) -> ([3], [5]); // 80
+u32_eq([5], [4]) { fallthrough() 933() }; // 81
+branch_align() -> (); // 82
+struct_deconstruct<core::byte_array::ByteArray>([1]) -> ([6], [7], [8]); // 83
+dup<u32>([8]) -> ([8], [9]); // 84
+dup<u32>([3]) -> ([3], [10]); // 85
+u32_overflowing_add([0], [9], [10]) { fallthrough([11], [12]) 916([13], [14]) }; // 86
+branch_align() -> (); // 87
+const_as_immediate<Const<u32, 31>>() -> ([15]); // 88
+dup<u32>([12]) -> ([12], [16]); // 89
+store_temp<u32>([15]) -> ([15]); // 90
+u32_overflowing_sub([11], [16], [15]) { fallthrough([17], [18]) 794([19], [20]) }; // 91
+branch_align() -> (); // 92
+drop<u32>([18]) -> (); // 93
+const_as_immediate<Const<u32, 31>>() -> ([21]); // 94
+dup<u32>([12]) -> ([12], [22]); // 95
+store_temp<RangeCheck>([17]) -> ([17]); // 96
+u32_eq([22], [21]) { fallthrough() 695() }; // 97
+branch_align() -> (); // 98
+drop<u32>([3]) -> (); // 99
+const_as_immediate<Const<u32, 31>>() -> ([23]); // 100
+store_temp<u32>([23]) -> ([23]); // 101
+u32_overflowing_sub([17], [12], [23]) { fallthrough([24], [25]) 679([26], [27]) }; // 102
+branch_align() -> (); // 103
+const_as_immediate<Const<u32, 16>>() -> ([28]); // 104
+dup<u32>([25]) -> ([25], [29]); // 105
+store_temp<RangeCheck>([24]) -> ([24]); // 106
+u32_eq([29], [28]) { fallthrough() 535() }; // 107
+branch_align() -> (); // 108
+const_as_immediate<Const<u32, 16>>() -> ([30]); // 109
+dup<u32>([25]) -> ([25], [31]); // 110
+store_temp<u32>([30]) -> ([30]); // 111
+u32_overflowing_sub([24], [31], [30]) { fallthrough([32], [33]) 312([34], [35]) }; // 112
+branch_align() -> (); // 113
+drop<u32>([33]) -> (); // 114
+u128s_from_felt252([32], [2]) { fallthrough([36], [37]) 122([38], [39], [40]) }; // 115
+branch_align() -> (); // 116
+const_as_immediate<Const<u128, 0>>() -> ([41]); // 117
+store_temp<RangeCheck>([36]) -> ([42]); // 118
+store_temp<u128>([37]) -> ([43]); // 119
+store_temp<u128>([41]) -> ([44]); // 120
+jump() { 126() }; // 121
+branch_align() -> (); // 122
+store_temp<RangeCheck>([38]) -> ([42]); // 123
+store_temp<u128>([40]) -> ([43]); // 124
+store_temp<u128>([39]) -> ([44]); // 125
+const_as_immediate<Const<u32, 16>>() -> ([45]); // 126
+dup<u32>([25]) -> ([25], [46]); // 127
+store_temp<u32>([45]) -> ([45]); // 128
+u32_overflowing_sub([42], [46], [45]) { fallthrough([47], [48]) 292([49], [50]) }; // 129
+branch_align() -> (); // 130
+store_temp<RangeCheck>([47]) -> ([47]); // 131
+store_temp<u32>([48]) -> ([48]); // 132
+function_call<user@core::bytes_31::one_shift_left_bytes_u128>([47], [48]) -> ([51], [52]); // 133
+enum_match<core::panics::PanicResult::<(core::integer::u128,)>>([52]) { fallthrough([53]) 280([54]) }; // 134
+branch_align() -> (); // 135
+struct_deconstruct<Tuple<u128>>([53]) -> ([55]); // 136
+u128_is_zero([55]) { fallthrough() 152([56]) }; // 137
+branch_align() -> (); // 138
+drop<Array<bytes31>>([6]) -> (); // 139
+drop<u32>([25]) -> (); // 140
+drop<u32>([8]) -> (); // 141
+drop<u128>([43]) -> (); // 142
+drop<felt252>([7]) -> (); // 143
+drop<u128>([44]) -> (); // 144
+array_new<felt252>() -> ([57]); // 145
+const_as_immediate<Const<felt252, 29721761890975875353235833581453094220424382983267374>>() -> ([58]); // 146
+store_temp<felt252>([58]) -> ([58]); // 147
+array_append<felt252>([57], [58]) -> ([59]); // 148
+store_temp<RangeCheck>([51]) -> ([60]); // 149
+store_temp<Array<felt252>>([59]) -> ([61]); // 150
+jump() { 306() }; // 151
+branch_align() -> (); // 152
+u128_safe_divmod([51], [44], [56]) -> ([62], [63], [64]); // 153
+u128_to_felt252([64]) -> ([65]); // 154
+u128_to_felt252([43]) -> ([66]); // 155
+u128_to_felt252([63]) -> ([67]); // 156
+const_as_immediate<Const<u32, 31>>() -> ([68]); // 157
+dup<u32>([8]) -> ([8], [69]); // 158
+store_temp<u32>([68]) -> ([68]); // 159
+u32_overflowing_sub([62], [68], [69]) { fallthrough([70], [71]) 264([72], [73]) }; // 160
+branch_align() -> (); // 161
+const_as_immediate<Const<felt252, 340282366920938463463374607431768211456>>() -> ([74]); // 162
+felt252_mul([65], [74]) -> ([75]); // 163
+store_temp<felt252>([75]) -> ([75]); // 164
+felt252_add([75], [66]) -> ([76]); // 165
+const_as_immediate<Const<u32, 16>>() -> ([77]); // 166
+dup<u32>([71]) -> ([71], [78]); // 167
+store_temp<u32>([77]) -> ([77]); // 168
+store_temp<felt252>([76]) -> ([76]); // 169
+u32_overflowing_sub([70], [78], [77]) { fallthrough([79], [80]) 216([81], [82]) }; // 170
+branch_align() -> (); // 171
+drop<u32>([80]) -> (); // 172
+const_as_immediate<Const<u32, 16>>() -> ([83]); // 173
+store_temp<u32>([83]) -> ([83]); // 174
+u32_overflowing_sub([79], [71], [83]) { fallthrough([84], [85]) 201([86], [87]) }; // 175
+branch_align() -> (); // 176
+store_temp<RangeCheck>([84]) -> ([84]); // 177
+store_temp<u32>([85]) -> ([85]); // 178
+function_call<user@core::bytes_31::one_shift_left_bytes_u128>([84], [85]) -> ([88], [89]); // 179
+enum_match<core::panics::PanicResult::<(core::integer::u128,)>>([89]) { fallthrough([90]) 189([91]) }; // 180
+branch_align() -> (); // 181
+struct_deconstruct<Tuple<u128>>([90]) -> ([92]); // 182
+u128_to_felt252([92]) -> ([93]); // 183
+const_as_immediate<Const<felt252, 340282366920938463463374607431768211456>>() -> ([94]); // 184
+felt252_mul([93], [94]) -> ([95]); // 185
+store_temp<RangeCheck>([88]) -> ([96]); // 186
+store_temp<felt252>([95]) -> ([97]); // 187
+jump() { 227() }; // 188
+branch_align() -> (); // 189
+drop<Array<bytes31>>([6]) -> (); // 190
+drop<u32>([25]) -> (); // 191
+drop<u32>([8]) -> (); // 192
+drop<felt252>([76]) -> (); // 193
+drop<felt252>([67]) -> (); // 194
+drop<felt252>([7]) -> (); // 195
+struct_deconstruct<Tuple<core::panics::Panic, Array<felt252>>>([91]) -> ([98], [99]); // 196
+drop<core::panics::Panic>([98]) -> (); // 197
+store_temp<RangeCheck>([88]) -> ([100]); // 198
+store_temp<Array<felt252>>([99]) -> ([101]); // 199
+jump() { 261() }; // 200
+branch_align() -> (); // 201
+drop<u32>([87]) -> (); // 202
+drop<Array<bytes31>>([6]) -> (); // 203
+drop<u32>([25]) -> (); // 204
+drop<u32>([8]) -> (); // 205
+drop<felt252>([76]) -> (); // 206
+drop<felt252>([7]) -> (); // 207
+drop<felt252>([67]) -> (); // 208
+array_new<felt252>() -> ([102]); // 209
+const_as_immediate<Const<felt252, 155785504329508738615720351733824384887>>() -> ([103]); // 210
+store_temp<felt252>([103]) -> ([103]); // 211
+array_append<felt252>([102], [103]) -> ([104]); // 212
+store_temp<RangeCheck>([86]) -> ([100]); // 213
+store_temp<Array<felt252>>([104]) -> ([101]); // 214
+jump() { 261() }; // 215
+branch_align() -> (); // 216
+drop<u32>([82]) -> (); // 217
+store_temp<RangeCheck>([81]) -> ([81]); // 218
+store_temp<u32>([71]) -> ([71]); // 219
+function_call<user@core::bytes_31::one_shift_left_bytes_u128>([81], [71]) -> ([105], [106]); // 220
+enum_match<core::panics::PanicResult::<(core::integer::u128,)>>([106]) { fallthrough([107]) 250([108]) }; // 221
+branch_align() -> (); // 222
+struct_deconstruct<Tuple<u128>>([107]) -> ([109]); // 223
+u128_to_felt252([109]) -> ([110]); // 224
+store_temp<RangeCheck>([105]) -> ([96]); // 225
+store_temp<felt252>([110]) -> ([97]); // 226
+felt252_mul([7], [97]) -> ([111]); // 227
+store_temp<felt252>([111]) -> ([111]); // 228
+felt252_add([67], [111]) -> ([112]); // 229
+store_temp<felt252>([112]) -> ([112]); // 230
+bytes31_try_from_felt252([96], [112]) { fallthrough([113], [114]) 238([115]) }; // 231
+branch_align() -> (); // 232
+array_append<bytes31>([6], [114]) -> ([116]); // 233
+struct_construct<core::byte_array::ByteArray>([116], [76], [8]) -> ([117]); // 234
+store_temp<RangeCheck>([113]) -> ([118]); // 235
+store_temp<core::byte_array::ByteArray>([117]) -> ([119]); // 236
+jump() { 443() }; // 237
+branch_align() -> (); // 238
+drop<Array<bytes31>>([6]) -> (); // 239
+drop<u32>([25]) -> (); // 240
+drop<u32>([8]) -> (); // 241
+drop<felt252>([76]) -> (); // 242
+array_new<felt252>() -> ([120]); // 243
+const_as_immediate<Const<felt252, 29721761890975875353235833581453094220424382983267374>>() -> ([121]); // 244
+store_temp<felt252>([121]) -> ([121]); // 245
+array_append<felt252>([120], [121]) -> ([122]); // 246
+store_temp<RangeCheck>([115]) -> ([60]); // 247
+store_temp<Array<felt252>>([122]) -> ([61]); // 248
+jump() { 306() }; // 249
+branch_align() -> (); // 250
+drop<Array<bytes31>>([6]) -> (); // 251
+drop<u32>([25]) -> (); // 252
+drop<u32>([8]) -> (); // 253
+drop<felt252>([76]) -> (); // 254
+drop<felt252>([67]) -> (); // 255
+drop<felt252>([7]) -> (); // 256
+struct_deconstruct<Tuple<core::panics::Panic, Array<felt252>>>([108]) -> ([123], [124]); // 257
+drop<core::panics::Panic>([123]) -> (); // 258
+store_temp<RangeCheck>([105]) -> ([100]); // 259
+store_temp<Array<felt252>>([124]) -> ([101]); // 260
+rename<RangeCheck>([100]) -> ([60]); // 261
+rename<Array<felt252>>([101]) -> ([61]); // 262
+jump() { 306() }; // 263
+branch_align() -> (); // 264
+drop<u32>([73]) -> (); // 265
+drop<Array<bytes31>>([6]) -> (); // 266
+drop<u32>([25]) -> (); // 267
+drop<u32>([8]) -> (); // 268
+drop<felt252>([65]) -> (); // 269
+drop<felt252>([7]) -> (); // 270
+drop<felt252>([67]) -> (); // 271
+drop<felt252>([66]) -> (); // 272
+array_new<felt252>() -> ([125]); // 273
+const_as_immediate<Const<felt252, 155785504329508738615720351733824384887>>() -> ([126]); // 274
+store_temp<felt252>([126]) -> ([126]); // 275
+array_append<felt252>([125], [126]) -> ([127]); // 276
+store_temp<RangeCheck>([72]) -> ([60]); // 277
+store_temp<Array<felt252>>([127]) -> ([61]); // 278
+jump() { 306() }; // 279
+branch_align() -> (); // 280
+drop<Array<bytes31>>([6]) -> (); // 281
+drop<u32>([25]) -> (); // 282
+drop<u32>([8]) -> (); // 283
+drop<u128>([43]) -> (); // 284
+drop<felt252>([7]) -> (); // 285
+drop<u128>([44]) -> (); // 286
+struct_deconstruct<Tuple<core::panics::Panic, Array<felt252>>>([54]) -> ([128], [129]); // 287
+drop<core::panics::Panic>([128]) -> (); // 288
+store_temp<RangeCheck>([51]) -> ([60]); // 289
+store_temp<Array<felt252>>([129]) -> ([61]); // 290
+jump() { 306() }; // 291
+branch_align() -> (); // 292
+drop<u32>([50]) -> (); // 293
+drop<u128>([44]) -> (); // 294
+drop<Array<bytes31>>([6]) -> (); // 295
+drop<u32>([25]) -> (); // 296
+drop<u32>([8]) -> (); // 297
+drop<u128>([43]) -> (); // 298
+drop<felt252>([7]) -> (); // 299
+array_new<felt252>() -> ([130]); // 300
+const_as_immediate<Const<felt252, 155785504329508738615720351733824384887>>() -> ([131]); // 301
+store_temp<felt252>([131]) -> ([131]); // 302
+array_append<felt252>([130], [131]) -> ([132]); // 303
+store_temp<RangeCheck>([49]) -> ([60]); // 304
+store_temp<Array<felt252>>([132]) -> ([61]); // 305
+struct_construct<core::panics::Panic>() -> ([133]); // 306
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([133], [61]) -> ([134]); // 307
+enum_init<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>, 1>([134]) -> ([135]); // 308
+store_temp<RangeCheck>([60]) -> ([60]); // 309
+store_temp<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>>([135]) -> ([135]); // 310
+return([60], [135]); // 311
+branch_align() -> (); // 312
+drop<u32>([35]) -> (); // 313
+u128s_from_felt252([34], [2]) { fallthrough([136], [137]) 321([138], [139], [140]) }; // 314
+branch_align() -> (); // 315
+const_as_immediate<Const<u128, 0>>() -> ([141]); // 316
+store_temp<RangeCheck>([136]) -> ([142]); // 317
+store_temp<u128>([137]) -> ([143]); // 318
+store_temp<u128>([141]) -> ([144]); // 319
+jump() { 325() }; // 320
+branch_align() -> (); // 321
+store_temp<RangeCheck>([138]) -> ([142]); // 322
+store_temp<u128>([140]) -> ([143]); // 323
+store_temp<u128>([139]) -> ([144]); // 324
+store_temp<RangeCheck>([142]) -> ([142]); // 325
+dup<u32>([25]) -> ([25], [145]); // 326
+store_temp<u32>([145]) -> ([145]); // 327
+function_call<user@core::bytes_31::one_shift_left_bytes_u128>([142], [145]) -> ([146], [147]); // 328
+enum_match<core::panics::PanicResult::<(core::integer::u128,)>>([147]) { fallthrough([148]) 518([149]) }; // 329
+branch_align() -> (); // 330
+struct_deconstruct<Tuple<u128>>([148]) -> ([150]); // 331
+u128_is_zero([150]) { fallthrough() 347([151]) }; // 332
+branch_align() -> (); // 333
+drop<Array<bytes31>>([6]) -> (); // 334
+drop<u32>([25]) -> (); // 335
+drop<u32>([8]) -> (); // 336
+drop<u128>([144]) -> (); // 337
+drop<felt252>([7]) -> (); // 338
+drop<u128>([143]) -> (); // 339
+array_new<felt252>() -> ([152]); // 340
+const_as_immediate<Const<felt252, 29721761890975875353235833581453094220424382983267374>>() -> ([153]); // 341
+store_temp<felt252>([153]) -> ([153]); // 342
+array_append<felt252>([152], [153]) -> ([154]); // 343
+store_temp<RangeCheck>([146]) -> ([155]); // 344
+store_temp<Array<felt252>>([154]) -> ([156]); // 345
+jump() { 529() }; // 346
+branch_align() -> (); // 347
+u128_safe_divmod([146], [143], [151]) -> ([157], [158], [159]); // 348
+u128_to_felt252([144]) -> ([160]); // 349
+const_as_immediate<Const<u32, 16>>() -> ([161]); // 350
+dup<u32>([25]) -> ([25], [162]); // 351
+store_temp<u32>([161]) -> ([161]); // 352
+u32_overflowing_sub([157], [161], [162]) { fallthrough([163], [164]) 502([165], [166]) }; // 353
+branch_align() -> (); // 354
+store_temp<RangeCheck>([163]) -> ([163]); // 355
+store_temp<u32>([164]) -> ([164]); // 356
+function_call<user@core::bytes_31::one_shift_left_bytes_u128>([163], [164]) -> ([167], [168]); // 357
+enum_match<core::panics::PanicResult::<(core::integer::u128,)>>([168]) { fallthrough([169]) 489([170]) }; // 358
+branch_align() -> (); // 359
+struct_deconstruct<Tuple<u128>>([169]) -> ([171]); // 360
+u128_to_felt252([171]) -> ([172]); // 361
+u128_to_felt252([158]) -> ([173]); // 362
+u128_to_felt252([159]) -> ([174]); // 363
+const_as_immediate<Const<u32, 31>>() -> ([175]); // 364
+dup<u32>([8]) -> ([8], [176]); // 365
+store_temp<u32>([175]) -> ([175]); // 366
+u32_overflowing_sub([167], [175], [176]) { fallthrough([177], [178]) 472([179], [180]) }; // 367
+branch_align() -> (); // 368
+felt252_mul([160], [172]) -> ([181]); // 369
+store_temp<felt252>([181]) -> ([181]); // 370
+felt252_add([181], [173]) -> ([182]); // 371
+const_as_immediate<Const<u32, 16>>() -> ([183]); // 372
+dup<u32>([178]) -> ([178], [184]); // 373
+store_temp<u32>([183]) -> ([183]); // 374
+store_temp<felt252>([182]) -> ([182]); // 375
+u32_overflowing_sub([177], [184], [183]) { fallthrough([185], [186]) 422([187], [188]) }; // 376
+branch_align() -> (); // 377
+drop<u32>([186]) -> (); // 378
+const_as_immediate<Const<u32, 16>>() -> ([189]); // 379
+store_temp<u32>([189]) -> ([189]); // 380
+u32_overflowing_sub([185], [178], [189]) { fallthrough([190], [191]) 407([192], [193]) }; // 381
+branch_align() -> (); // 382
+store_temp<RangeCheck>([190]) -> ([190]); // 383
+store_temp<u32>([191]) -> ([191]); // 384
+function_call<user@core::bytes_31::one_shift_left_bytes_u128>([190], [191]) -> ([194], [195]); // 385
+enum_match<core::panics::PanicResult::<(core::integer::u128,)>>([195]) { fallthrough([196]) 395([197]) }; // 386
+branch_align() -> (); // 387
+struct_deconstruct<Tuple<u128>>([196]) -> ([198]); // 388
+u128_to_felt252([198]) -> ([199]); // 389
+const_as_immediate<Const<felt252, 340282366920938463463374607431768211456>>() -> ([200]); // 390
+felt252_mul([199], [200]) -> ([201]); // 391
+store_temp<RangeCheck>([194]) -> ([202]); // 392
+store_temp<felt252>([201]) -> ([203]); // 393
+jump() { 433() }; // 394
+branch_align() -> (); // 395
+drop<Array<bytes31>>([6]) -> (); // 396
+drop<u32>([25]) -> (); // 397
+drop<u32>([8]) -> (); // 398
+drop<felt252>([174]) -> (); // 399
+drop<felt252>([182]) -> (); // 400
+drop<felt252>([7]) -> (); // 401
+struct_deconstruct<Tuple<core::panics::Panic, Array<felt252>>>([197]) -> ([204], [205]); // 402
+drop<core::panics::Panic>([204]) -> (); // 403
+store_temp<RangeCheck>([194]) -> ([206]); // 404
+store_temp<Array<felt252>>([205]) -> ([207]); // 405
+jump() { 469() }; // 406
+branch_align() -> (); // 407
+drop<u32>([193]) -> (); // 408
+drop<Array<bytes31>>([6]) -> (); // 409
+drop<u32>([25]) -> (); // 410
+drop<u32>([8]) -> (); // 411
+drop<felt252>([174]) -> (); // 412
+drop<felt252>([7]) -> (); // 413
+drop<felt252>([182]) -> (); // 414
+array_new<felt252>() -> ([208]); // 415
+const_as_immediate<Const<felt252, 155785504329508738615720351733824384887>>() -> ([209]); // 416
+store_temp<felt252>([209]) -> ([209]); // 417
+array_append<felt252>([208], [209]) -> ([210]); // 418
+store_temp<RangeCheck>([192]) -> ([206]); // 419
+store_temp<Array<felt252>>([210]) -> ([207]); // 420
+jump() { 469() }; // 421
+branch_align() -> (); // 422
+drop<u32>([188]) -> (); // 423
+store_temp<RangeCheck>([187]) -> ([187]); // 424
+store_temp<u32>([178]) -> ([178]); // 425
+function_call<user@core::bytes_31::one_shift_left_bytes_u128>([187], [178]) -> ([211], [212]); // 426
+enum_match<core::panics::PanicResult::<(core::integer::u128,)>>([212]) { fallthrough([213]) 458([214]) }; // 427
+branch_align() -> (); // 428
+struct_deconstruct<Tuple<u128>>([213]) -> ([215]); // 429
+u128_to_felt252([215]) -> ([216]); // 430
+store_temp<RangeCheck>([211]) -> ([202]); // 431
+store_temp<felt252>([216]) -> ([203]); // 432
+felt252_mul([7], [203]) -> ([217]); // 433
+store_temp<felt252>([217]) -> ([217]); // 434
+felt252_add([182], [217]) -> ([218]); // 435
+store_temp<felt252>([218]) -> ([218]); // 436
+bytes31_try_from_felt252([202], [218]) { fallthrough([219], [220]) 446([221]) }; // 437
+branch_align() -> (); // 438
+array_append<bytes31>([6], [220]) -> ([222]); // 439
+struct_construct<core::byte_array::ByteArray>([222], [174], [8]) -> ([223]); // 440
+store_temp<RangeCheck>([219]) -> ([118]); // 441
+store_temp<core::byte_array::ByteArray>([223]) -> ([119]); // 442
+rename<RangeCheck>([118]) -> ([224]); // 443
+rename<core::byte_array::ByteArray>([119]) -> ([225]); // 444
+jump() { 624() }; // 445
+branch_align() -> (); // 446
+drop<Array<bytes31>>([6]) -> (); // 447
+drop<u32>([25]) -> (); // 448
+drop<u32>([8]) -> (); // 449
+drop<felt252>([174]) -> (); // 450
+array_new<felt252>() -> ([226]); // 451
+const_as_immediate<Const<felt252, 29721761890975875353235833581453094220424382983267374>>() -> ([227]); // 452
+store_temp<felt252>([227]) -> ([227]); // 453
+array_append<felt252>([226], [227]) -> ([228]); // 454
+store_temp<RangeCheck>([221]) -> ([155]); // 455
+store_temp<Array<felt252>>([228]) -> ([156]); // 456
+jump() { 529() }; // 457
+branch_align() -> (); // 458
+drop<Array<bytes31>>([6]) -> (); // 459
+drop<u32>([25]) -> (); // 460
+drop<u32>([8]) -> (); // 461
+drop<felt252>([174]) -> (); // 462
+drop<felt252>([182]) -> (); // 463
+drop<felt252>([7]) -> (); // 464
+struct_deconstruct<Tuple<core::panics::Panic, Array<felt252>>>([214]) -> ([229], [230]); // 465
+drop<core::panics::Panic>([229]) -> (); // 466
+store_temp<RangeCheck>([211]) -> ([206]); // 467
+store_temp<Array<felt252>>([230]) -> ([207]); // 468
+rename<RangeCheck>([206]) -> ([155]); // 469
+rename<Array<felt252>>([207]) -> ([156]); // 470
+jump() { 529() }; // 471
+branch_align() -> (); // 472
+drop<u32>([180]) -> (); // 473
+drop<Array<bytes31>>([6]) -> (); // 474
+drop<u32>([25]) -> (); // 475
+drop<u32>([8]) -> (); // 476
+drop<felt252>([174]) -> (); // 477
+drop<felt252>([7]) -> (); // 478
+drop<felt252>([160]) -> (); // 479
+drop<felt252>([172]) -> (); // 480
+drop<felt252>([173]) -> (); // 481
+array_new<felt252>() -> ([231]); // 482
+const_as_immediate<Const<felt252, 155785504329508738615720351733824384887>>() -> ([232]); // 483
+store_temp<felt252>([232]) -> ([232]); // 484
+array_append<felt252>([231], [232]) -> ([233]); // 485
+store_temp<RangeCheck>([179]) -> ([155]); // 486
+store_temp<Array<felt252>>([233]) -> ([156]); // 487
+jump() { 529() }; // 488
+branch_align() -> (); // 489
+drop<Array<bytes31>>([6]) -> (); // 490
+drop<u32>([25]) -> (); // 491
+drop<u32>([8]) -> (); // 492
+drop<felt252>([7]) -> (); // 493
+drop<felt252>([160]) -> (); // 494
+drop<u128>([158]) -> (); // 495
+drop<u128>([159]) -> (); // 496
+struct_deconstruct<Tuple<core::panics::Panic, Array<felt252>>>([170]) -> ([234], [235]); // 497
+drop<core::panics::Panic>([234]) -> (); // 498
+store_temp<RangeCheck>([167]) -> ([155]); // 499
+store_temp<Array<felt252>>([235]) -> ([156]); // 500
+jump() { 529() }; // 501
+branch_align() -> (); // 502
+drop<u32>([166]) -> (); // 503
+drop<Array<bytes31>>([6]) -> (); // 504
+drop<u32>([25]) -> (); // 505
+drop<u32>([8]) -> (); // 506
+drop<u128>([159]) -> (); // 507
+drop<felt252>([7]) -> (); // 508
+drop<felt252>([160]) -> (); // 509
+drop<u128>([158]) -> (); // 510
+array_new<felt252>() -> ([236]); // 511
+const_as_immediate<Const<felt252, 155785504329508738615720351733824384887>>() -> ([237]); // 512
+store_temp<felt252>([237]) -> ([237]); // 513
+array_append<felt252>([236], [237]) -> ([238]); // 514
+store_temp<RangeCheck>([165]) -> ([155]); // 515
+store_temp<Array<felt252>>([238]) -> ([156]); // 516
+jump() { 529() }; // 517
+branch_align() -> (); // 518
+drop<Array<bytes31>>([6]) -> (); // 519
+drop<u32>([25]) -> (); // 520
+drop<u32>([8]) -> (); // 521
+drop<u128>([144]) -> (); // 522
+drop<felt252>([7]) -> (); // 523
+drop<u128>([143]) -> (); // 524
+struct_deconstruct<Tuple<core::panics::Panic, Array<felt252>>>([149]) -> ([239], [240]); // 525
+drop<core::panics::Panic>([239]) -> (); // 526
+store_temp<RangeCheck>([146]) -> ([155]); // 527
+store_temp<Array<felt252>>([240]) -> ([156]); // 528
+struct_construct<core::panics::Panic>() -> ([241]); // 529
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([241], [156]) -> ([242]); // 530
+enum_init<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>, 1>([242]) -> ([243]); // 531
+store_temp<RangeCheck>([155]) -> ([155]); // 532
+store_temp<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>>([243]) -> ([243]); // 533
+return([155], [243]); // 534
+branch_align() -> (); // 535
+u128s_from_felt252([24], [2]) { fallthrough([244], [245]) 543([246], [247], [248]) }; // 536
+branch_align() -> (); // 537
+const_as_immediate<Const<u128, 0>>() -> ([249]); // 538
+store_temp<RangeCheck>([244]) -> ([250]); // 539
+store_temp<u128>([245]) -> ([251]); // 540
+store_temp<u128>([249]) -> ([252]); // 541
+jump() { 547() }; // 542
+branch_align() -> (); // 543
+store_temp<RangeCheck>([246]) -> ([250]); // 544
+store_temp<u128>([248]) -> ([251]); // 545
+store_temp<u128>([247]) -> ([252]); // 546
+u128_to_felt252([252]) -> ([253]); // 547
+u128_to_felt252([251]) -> ([254]); // 548
+const_as_immediate<Const<u32, 31>>() -> ([255]); // 549
+dup<u32>([8]) -> ([8], [256]); // 550
+store_temp<u32>([255]) -> ([255]); // 551
+u32_overflowing_sub([250], [255], [256]) { fallthrough([257], [258]) 659([259], [260]) }; // 552
+branch_align() -> (); // 553
+const_as_immediate<Const<u32, 16>>() -> ([261]); // 554
+dup<u32>([258]) -> ([258], [262]); // 555
+store_temp<u32>([261]) -> ([261]); // 556
+u32_overflowing_sub([257], [262], [261]) { fallthrough([263], [264]) 603([265], [266]) }; // 557
+branch_align() -> (); // 558
+drop<u32>([264]) -> (); // 559
+const_as_immediate<Const<u32, 16>>() -> ([267]); // 560
+store_temp<u32>([267]) -> ([267]); // 561
+u32_overflowing_sub([263], [258], [267]) { fallthrough([268], [269]) 588([270], [271]) }; // 562
+branch_align() -> (); // 563
+store_temp<RangeCheck>([268]) -> ([268]); // 564
+store_temp<u32>([269]) -> ([269]); // 565
+function_call<user@core::bytes_31::one_shift_left_bytes_u128>([268], [269]) -> ([272], [273]); // 566
+enum_match<core::panics::PanicResult::<(core::integer::u128,)>>([273]) { fallthrough([274]) 576([275]) }; // 567
+branch_align() -> (); // 568
+struct_deconstruct<Tuple<u128>>([274]) -> ([276]); // 569
+u128_to_felt252([276]) -> ([277]); // 570
+const_as_immediate<Const<felt252, 340282366920938463463374607431768211456>>() -> ([278]); // 571
+felt252_mul([277], [278]) -> ([279]); // 572
+store_temp<RangeCheck>([272]) -> ([280]); // 573
+store_temp<felt252>([279]) -> ([281]); // 574
+jump() { 614() }; // 575
+branch_align() -> (); // 576
+drop<Array<bytes31>>([6]) -> (); // 577
+drop<u32>([25]) -> (); // 578
+drop<u32>([8]) -> (); // 579
+drop<felt252>([254]) -> (); // 580
+drop<felt252>([253]) -> (); // 581
+drop<felt252>([7]) -> (); // 582
+struct_deconstruct<Tuple<core::panics::Panic, Array<felt252>>>([275]) -> ([282], [283]); // 583
+drop<core::panics::Panic>([282]) -> (); // 584
+store_temp<RangeCheck>([272]) -> ([284]); // 585
+store_temp<Array<felt252>>([283]) -> ([285]); // 586
+jump() { 656() }; // 587
+branch_align() -> (); // 588
+drop<u32>([271]) -> (); // 589
+drop<Array<bytes31>>([6]) -> (); // 590
+drop<u32>([25]) -> (); // 591
+drop<u32>([8]) -> (); // 592
+drop<felt252>([254]) -> (); // 593
+drop<felt252>([7]) -> (); // 594
+drop<felt252>([253]) -> (); // 595
+array_new<felt252>() -> ([286]); // 596
+const_as_immediate<Const<felt252, 155785504329508738615720351733824384887>>() -> ([287]); // 597
+store_temp<felt252>([287]) -> ([287]); // 598
+array_append<felt252>([286], [287]) -> ([288]); // 599
+store_temp<RangeCheck>([270]) -> ([284]); // 600
+store_temp<Array<felt252>>([288]) -> ([285]); // 601
+jump() { 656() }; // 602
+branch_align() -> (); // 603
+drop<u32>([266]) -> (); // 604
+store_temp<RangeCheck>([265]) -> ([265]); // 605
+store_temp<u32>([258]) -> ([258]); // 606
+function_call<user@core::bytes_31::one_shift_left_bytes_u128>([265], [258]) -> ([289], [290]); // 607
+enum_match<core::panics::PanicResult::<(core::integer::u128,)>>([290]) { fallthrough([291]) 645([292]) }; // 608
+branch_align() -> (); // 609
+struct_deconstruct<Tuple<u128>>([291]) -> ([293]); // 610
+u128_to_felt252([293]) -> ([294]); // 611
+store_temp<RangeCheck>([289]) -> ([280]); // 612
+store_temp<felt252>([294]) -> ([281]); // 613
+felt252_mul([7], [281]) -> ([295]); // 614
+store_temp<felt252>([295]) -> ([295]); // 615
+felt252_add([253], [295]) -> ([296]); // 616
+store_temp<felt252>([296]) -> ([296]); // 617
+bytes31_try_from_felt252([280], [296]) { fallthrough([297], [298]) 633([299]) }; // 618
+branch_align() -> (); // 619
+array_append<bytes31>([6], [298]) -> ([300]); // 620
+struct_construct<core::byte_array::ByteArray>([300], [254], [8]) -> ([301]); // 621
+store_temp<RangeCheck>([297]) -> ([224]); // 622
+store_temp<core::byte_array::ByteArray>([301]) -> ([225]); // 623
+struct_deconstruct<core::byte_array::ByteArray>([225]) -> ([302], [303], [304]); // 624
+drop<u32>([304]) -> (); // 625
+struct_construct<core::byte_array::ByteArray>([302], [303], [25]) -> ([305]); // 626
+struct_construct<Unit>() -> ([306]); // 627
+struct_construct<Tuple<core::byte_array::ByteArray, Unit>>([305], [306]) -> ([307]); // 628
+enum_init<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>, 0>([307]) -> ([308]); // 629
+store_temp<RangeCheck>([224]) -> ([224]); // 630
+store_temp<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>>([308]) -> ([308]); // 631
+return([224], [308]); // 632
+branch_align() -> (); // 633
+drop<Array<bytes31>>([6]) -> (); // 634
+drop<u32>([25]) -> (); // 635
+drop<u32>([8]) -> (); // 636
+drop<felt252>([254]) -> (); // 637
+array_new<felt252>() -> ([309]); // 638
+const_as_immediate<Const<felt252, 29721761890975875353235833581453094220424382983267374>>() -> ([310]); // 639
+store_temp<felt252>([310]) -> ([310]); // 640
+array_append<felt252>([309], [310]) -> ([311]); // 641
+store_temp<RangeCheck>([299]) -> ([312]); // 642
+store_temp<Array<felt252>>([311]) -> ([313]); // 643
+jump() { 673() }; // 644
+branch_align() -> (); // 645
+drop<Array<bytes31>>([6]) -> (); // 646
+drop<u32>([25]) -> (); // 647
+drop<u32>([8]) -> (); // 648
+drop<felt252>([254]) -> (); // 649
+drop<felt252>([253]) -> (); // 650
+drop<felt252>([7]) -> (); // 651
+struct_deconstruct<Tuple<core::panics::Panic, Array<felt252>>>([292]) -> ([314], [315]); // 652
+drop<core::panics::Panic>([314]) -> (); // 653
+store_temp<RangeCheck>([289]) -> ([284]); // 654
+store_temp<Array<felt252>>([315]) -> ([285]); // 655
+rename<RangeCheck>([284]) -> ([312]); // 656
+rename<Array<felt252>>([285]) -> ([313]); // 657
+jump() { 673() }; // 658
+branch_align() -> (); // 659
+drop<u32>([260]) -> (); // 660
+drop<Array<bytes31>>([6]) -> (); // 661
+drop<u32>([25]) -> (); // 662
+drop<u32>([8]) -> (); // 663
+drop<felt252>([254]) -> (); // 664
+drop<felt252>([7]) -> (); // 665
+drop<felt252>([253]) -> (); // 666
+array_new<felt252>() -> ([316]); // 667
+const_as_immediate<Const<felt252, 155785504329508738615720351733824384887>>() -> ([317]); // 668
+store_temp<felt252>([317]) -> ([317]); // 669
+array_append<felt252>([316], [317]) -> ([318]); // 670
+store_temp<RangeCheck>([259]) -> ([312]); // 671
+store_temp<Array<felt252>>([318]) -> ([313]); // 672
+struct_construct<core::panics::Panic>() -> ([319]); // 673
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([319], [313]) -> ([320]); // 674
+enum_init<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>, 1>([320]) -> ([321]); // 675
+store_temp<RangeCheck>([312]) -> ([312]); // 676
+store_temp<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>>([321]) -> ([321]); // 677
+return([312], [321]); // 678
+branch_align() -> (); // 679
+drop<u32>([27]) -> (); // 680
+drop<felt252>([7]) -> (); // 681
+drop<Array<bytes31>>([6]) -> (); // 682
+drop<felt252>([2]) -> (); // 683
+drop<u32>([8]) -> (); // 684
+array_new<felt252>() -> ([322]); // 685
+const_as_immediate<Const<felt252, 155785504329508738615720351733824384887>>() -> ([323]); // 686
+store_temp<felt252>([323]) -> ([323]); // 687
+array_append<felt252>([322], [323]) -> ([324]); // 688
+struct_construct<core::panics::Panic>() -> ([325]); // 689
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([325], [324]) -> ([326]); // 690
+enum_init<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>, 1>([326]) -> ([327]); // 691
+store_temp<RangeCheck>([26]) -> ([26]); // 692
+store_temp<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>>([327]) -> ([327]); // 693
+return([26], [327]); // 694
+branch_align() -> (); // 695
+drop<u32>([8]) -> (); // 696
+drop<u32>([12]) -> (); // 697
+const_as_immediate<Const<u32, 16>>() -> ([328]); // 698
+dup<u32>([3]) -> ([3], [329]); // 699
+store_temp<u32>([328]) -> ([328]); // 700
+u32_overflowing_sub([17], [329], [328]) { fallthrough([330], [331]) 741([332], [333]) }; // 701
+branch_align() -> (); // 702
+drop<u32>([331]) -> (); // 703
+const_as_immediate<Const<u32, 16>>() -> ([334]); // 704
+store_temp<u32>([334]) -> ([334]); // 705
+u32_overflowing_sub([330], [3], [334]) { fallthrough([335], [336]) 729([337], [338]) }; // 706
+branch_align() -> (); // 707
+store_temp<RangeCheck>([335]) -> ([335]); // 708
+store_temp<u32>([336]) -> ([336]); // 709
+function_call<user@core::bytes_31::one_shift_left_bytes_u128>([335], [336]) -> ([339], [340]); // 710
+enum_match<core::panics::PanicResult::<(core::integer::u128,)>>([340]) { fallthrough([341]) 720([342]) }; // 711
+branch_align() -> (); // 712
+struct_deconstruct<Tuple<u128>>([341]) -> ([343]); // 713
+u128_to_felt252([343]) -> ([344]); // 714
+const_as_immediate<Const<felt252, 340282366920938463463374607431768211456>>() -> ([345]); // 715
+felt252_mul([344], [345]) -> ([346]); // 716
+store_temp<RangeCheck>([339]) -> ([347]); // 717
+store_temp<felt252>([346]) -> ([348]); // 718
+jump() { 752() }; // 719
+branch_align() -> (); // 720
+drop<Array<bytes31>>([6]) -> (); // 721
+drop<felt252>([2]) -> (); // 722
+drop<felt252>([7]) -> (); // 723
+struct_deconstruct<Tuple<core::panics::Panic, Array<felt252>>>([342]) -> ([349], [350]); // 724
+drop<core::panics::Panic>([349]) -> (); // 725
+store_temp<RangeCheck>([339]) -> ([351]); // 726
+store_temp<Array<felt252>>([350]) -> ([352]); // 727
+jump() { 788() }; // 728
+branch_align() -> (); // 729
+drop<u32>([338]) -> (); // 730
+drop<Array<bytes31>>([6]) -> (); // 731
+drop<felt252>([7]) -> (); // 732
+drop<felt252>([2]) -> (); // 733
+array_new<felt252>() -> ([353]); // 734
+const_as_immediate<Const<felt252, 155785504329508738615720351733824384887>>() -> ([354]); // 735
+store_temp<felt252>([354]) -> ([354]); // 736
+array_append<felt252>([353], [354]) -> ([355]); // 737
+store_temp<RangeCheck>([337]) -> ([351]); // 738
+store_temp<Array<felt252>>([355]) -> ([352]); // 739
+jump() { 788() }; // 740
+branch_align() -> (); // 741
+drop<u32>([333]) -> (); // 742
+store_temp<RangeCheck>([332]) -> ([332]); // 743
+store_temp<u32>([3]) -> ([3]); // 744
+function_call<user@core::bytes_31::one_shift_left_bytes_u128>([332], [3]) -> ([356], [357]); // 745
+enum_match<core::panics::PanicResult::<(core::integer::u128,)>>([357]) { fallthrough([358]) 780([359]) }; // 746
+branch_align() -> (); // 747
+struct_deconstruct<Tuple<u128>>([358]) -> ([360]); // 748
+u128_to_felt252([360]) -> ([361]); // 749
+store_temp<RangeCheck>([356]) -> ([347]); // 750
+store_temp<felt252>([361]) -> ([348]); // 751
+felt252_mul([7], [348]) -> ([362]); // 752
+store_temp<felt252>([362]) -> ([362]); // 753
+felt252_add([2], [362]) -> ([363]); // 754
+store_temp<felt252>([363]) -> ([363]); // 755
+bytes31_try_from_felt252([347], [363]) { fallthrough([364], [365]) 768([366]) }; // 756
+branch_align() -> (); // 757
+array_append<bytes31>([6], [365]) -> ([367]); // 758
+const_as_immediate<Const<felt252, 0>>() -> ([368]); // 759
+const_as_immediate<Const<u32, 0>>() -> ([369]); // 760
+struct_construct<core::byte_array::ByteArray>([367], [368], [369]) -> ([370]); // 761
+struct_construct<Unit>() -> ([371]); // 762
+struct_construct<Tuple<core::byte_array::ByteArray, Unit>>([370], [371]) -> ([372]); // 763
+enum_init<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>, 0>([372]) -> ([373]); // 764
+store_temp<RangeCheck>([364]) -> ([364]); // 765
+store_temp<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>>([373]) -> ([373]); // 766
+return([364], [373]); // 767
+branch_align() -> (); // 768
+drop<Array<bytes31>>([6]) -> (); // 769
+array_new<felt252>() -> ([374]); // 770
+const_as_immediate<Const<felt252, 29721761890975875353235833581453094220424382983267374>>() -> ([375]); // 771
+store_temp<felt252>([375]) -> ([375]); // 772
+array_append<felt252>([374], [375]) -> ([376]); // 773
+struct_construct<core::panics::Panic>() -> ([377]); // 774
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([377], [376]) -> ([378]); // 775
+enum_init<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>, 1>([378]) -> ([379]); // 776
+store_temp<RangeCheck>([366]) -> ([366]); // 777
+store_temp<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>>([379]) -> ([379]); // 778
+return([366], [379]); // 779
+branch_align() -> (); // 780
+drop<Array<bytes31>>([6]) -> (); // 781
+drop<felt252>([2]) -> (); // 782
+drop<felt252>([7]) -> (); // 783
+struct_deconstruct<Tuple<core::panics::Panic, Array<felt252>>>([359]) -> ([380], [381]); // 784
+drop<core::panics::Panic>([380]) -> (); // 785
+store_temp<RangeCheck>([356]) -> ([351]); // 786
+store_temp<Array<felt252>>([381]) -> ([352]); // 787
+struct_construct<core::panics::Panic>() -> ([382]); // 788
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([382], [352]) -> ([383]); // 789
+enum_init<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>, 1>([383]) -> ([384]); // 790
+store_temp<RangeCheck>([351]) -> ([351]); // 791
+store_temp<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>>([384]) -> ([384]); // 792
+return([351], [384]); // 793
+branch_align() -> (); // 794
+drop<u32>([20]) -> (); // 795
+drop<u32>([12]) -> (); // 796
+const_as_immediate<Const<u32, 0>>() -> ([385]); // 797
+dup<u32>([8]) -> ([8], [386]); // 798
+store_temp<RangeCheck>([19]) -> ([19]); // 799
+u32_eq([386], [385]) { fallthrough() 906() }; // 800
+branch_align() -> (); // 801
+const_as_immediate<Const<u32, 16>>() -> ([387]); // 802
+dup<u32>([3]) -> ([3], [388]); // 803
+store_temp<u32>([387]) -> ([387]); // 804
+u32_overflowing_sub([19], [388], [387]) { fallthrough([389], [390]) 850([391], [392]) }; // 805
+branch_align() -> (); // 806
+drop<u32>([390]) -> (); // 807
+const_as_immediate<Const<u32, 16>>() -> ([393]); // 808
+dup<u32>([3]) -> ([3], [394]); // 809
+store_temp<u32>([393]) -> ([393]); // 810
+u32_overflowing_sub([389], [394], [393]) { fallthrough([395], [396]) 836([397], [398]) }; // 811
+branch_align() -> (); // 812
+store_temp<RangeCheck>([395]) -> ([395]); // 813
+store_temp<u32>([396]) -> ([396]); // 814
+function_call<user@core::bytes_31::one_shift_left_bytes_u128>([395], [396]) -> ([399], [400]); // 815
+enum_match<core::panics::PanicResult::<(core::integer::u128,)>>([400]) { fallthrough([401]) 825([402]) }; // 816
+branch_align() -> (); // 817
+struct_deconstruct<Tuple<u128>>([401]) -> ([403]); // 818
+u128_to_felt252([403]) -> ([404]); // 819
+const_as_immediate<Const<felt252, 340282366920938463463374607431768211456>>() -> ([405]); // 820
+felt252_mul([404], [405]) -> ([406]); // 821
+store_temp<RangeCheck>([399]) -> ([407]); // 822
+store_temp<felt252>([406]) -> ([408]); // 823
+jump() { 862() }; // 824
+branch_align() -> (); // 825
+drop<felt252>([7]) -> (); // 826
+drop<Array<bytes31>>([6]) -> (); // 827
+drop<felt252>([2]) -> (); // 828
+drop<u32>([3]) -> (); // 829
+drop<u32>([8]) -> (); // 830
+struct_deconstruct<Tuple<core::panics::Panic, Array<felt252>>>([402]) -> ([409], [410]); // 831
+drop<core::panics::Panic>([409]) -> (); // 832
+store_temp<RangeCheck>([399]) -> ([411]); // 833
+store_temp<Array<felt252>>([410]) -> ([412]); // 834
+jump() { 900() }; // 835
+branch_align() -> (); // 836
+drop<u32>([398]) -> (); // 837
+drop<felt252>([7]) -> (); // 838
+drop<u32>([8]) -> (); // 839
+drop<Array<bytes31>>([6]) -> (); // 840
+drop<felt252>([2]) -> (); // 841
+drop<u32>([3]) -> (); // 842
+array_new<felt252>() -> ([413]); // 843
+const_as_immediate<Const<felt252, 155785504329508738615720351733824384887>>() -> ([414]); // 844
+store_temp<felt252>([414]) -> ([414]); // 845
+array_append<felt252>([413], [414]) -> ([415]); // 846
+store_temp<RangeCheck>([397]) -> ([411]); // 847
+store_temp<Array<felt252>>([415]) -> ([412]); // 848
+jump() { 900() }; // 849
+branch_align() -> (); // 850
+drop<u32>([392]) -> (); // 851
+store_temp<RangeCheck>([391]) -> ([391]); // 852
+dup<u32>([3]) -> ([3], [416]); // 853
+store_temp<u32>([416]) -> ([416]); // 854
+function_call<user@core::bytes_31::one_shift_left_bytes_u128>([391], [416]) -> ([417], [418]); // 855
+enum_match<core::panics::PanicResult::<(core::integer::u128,)>>([418]) { fallthrough([419]) 890([420]) }; // 856
+branch_align() -> (); // 857
+struct_deconstruct<Tuple<u128>>([419]) -> ([421]); // 858
+u128_to_felt252([421]) -> ([422]); // 859
+store_temp<RangeCheck>([417]) -> ([407]); // 860
+store_temp<felt252>([422]) -> ([408]); // 861
+u32_overflowing_add([407], [8], [3]) { fallthrough([423], [424]) 874([425], [426]) }; // 862
+branch_align() -> (); // 863
+felt252_mul([7], [408]) -> ([427]); // 864
+store_temp<felt252>([427]) -> ([427]); // 865
+felt252_add([2], [427]) -> ([428]); // 866
+struct_construct<core::byte_array::ByteArray>([6], [428], [424]) -> ([429]); // 867
+struct_construct<Unit>() -> ([430]); // 868
+struct_construct<Tuple<core::byte_array::ByteArray, Unit>>([429], [430]) -> ([431]); // 869
+enum_init<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>, 0>([431]) -> ([432]); // 870
+store_temp<RangeCheck>([423]) -> ([423]); // 871
+store_temp<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>>([432]) -> ([432]); // 872
+return([423], [432]); // 873
+branch_align() -> (); // 874
+drop<u32>([426]) -> (); // 875
+drop<felt252>([7]) -> (); // 876
+drop<felt252>([408]) -> (); // 877
+drop<Array<bytes31>>([6]) -> (); // 878
+drop<felt252>([2]) -> (); // 879
+array_new<felt252>() -> ([433]); // 880
+const_as_immediate<Const<felt252, 155785504323917466144735657540098748279>>() -> ([434]); // 881
+store_temp<felt252>([434]) -> ([434]); // 882
+array_append<felt252>([433], [434]) -> ([435]); // 883
+struct_construct<core::panics::Panic>() -> ([436]); // 884
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([436], [435]) -> ([437]); // 885
+enum_init<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>, 1>([437]) -> ([438]); // 886
+store_temp<RangeCheck>([425]) -> ([425]); // 887
+store_temp<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>>([438]) -> ([438]); // 888
+return([425], [438]); // 889
+branch_align() -> (); // 890
+drop<felt252>([7]) -> (); // 891
+drop<Array<bytes31>>([6]) -> (); // 892
+drop<felt252>([2]) -> (); // 893
+drop<u32>([3]) -> (); // 894
+drop<u32>([8]) -> (); // 895
+struct_deconstruct<Tuple<core::panics::Panic, Array<felt252>>>([420]) -> ([439], [440]); // 896
+drop<core::panics::Panic>([439]) -> (); // 897
+store_temp<RangeCheck>([417]) -> ([411]); // 898
+store_temp<Array<felt252>>([440]) -> ([412]); // 899
+struct_construct<core::panics::Panic>() -> ([441]); // 900
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([441], [412]) -> ([442]); // 901
+enum_init<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>, 1>([442]) -> ([443]); // 902
+store_temp<RangeCheck>([411]) -> ([411]); // 903
+store_temp<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>>([443]) -> ([443]); // 904
+return([411], [443]); // 905
+branch_align() -> (); // 906
+drop<felt252>([7]) -> (); // 907
+drop<u32>([8]) -> (); // 908
+struct_construct<core::byte_array::ByteArray>([6], [2], [3]) -> ([444]); // 909
+struct_construct<Unit>() -> ([445]); // 910
+struct_construct<Tuple<core::byte_array::ByteArray, Unit>>([444], [445]) -> ([446]); // 911
+enum_init<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>, 0>([446]) -> ([447]); // 912
+store_temp<RangeCheck>([19]) -> ([19]); // 913
+store_temp<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>>([447]) -> ([447]); // 914
+return([19], [447]); // 915
+branch_align() -> (); // 916
+drop<u32>([14]) -> (); // 917
+drop<felt252>([7]) -> (); // 918
+drop<Array<bytes31>>([6]) -> (); // 919
+drop<felt252>([2]) -> (); // 920
+drop<u32>([8]) -> (); // 921
+drop<u32>([3]) -> (); // 922
+array_new<felt252>() -> ([448]); // 923
+const_as_immediate<Const<felt252, 155785504323917466144735657540098748279>>() -> ([449]); // 924
+store_temp<felt252>([449]) -> ([449]); // 925
+array_append<felt252>([448], [449]) -> ([450]); // 926
+struct_construct<core::panics::Panic>() -> ([451]); // 927
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([451], [450]) -> ([452]); // 928
+enum_init<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>, 1>([452]) -> ([453]); // 929
+store_temp<RangeCheck>([13]) -> ([13]); // 930
+store_temp<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>>([453]) -> ([453]); // 931
+return([13], [453]); // 932
+branch_align() -> (); // 933
+drop<u32>([3]) -> (); // 934
+drop<felt252>([2]) -> (); // 935
+struct_construct<Unit>() -> ([454]); // 936
+struct_construct<Tuple<core::byte_array::ByteArray, Unit>>([1], [454]) -> ([455]); // 937
+enum_init<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>, 0>([455]) -> ([456]); // 938
+store_temp<RangeCheck>([0]) -> ([0]); // 939
+store_temp<core::panics::PanicResult::<(core::byte_array::ByteArray, ())>>([456]) -> ([456]); // 940
+return([0], [456]); // 941
+disable_ap_tracking() -> (); // 942
+withdraw_gas([0], [1]) { fallthrough([4], [5]) 985([6], [7]) }; // 943
+branch_align() -> (); // 944
+struct_deconstruct<core::array::Span::<core::bytes_31::bytes31>>([2]) -> ([8]); // 945
+enable_ap_tracking() -> (); // 946
+store_temp<RangeCheck>([4]) -> ([4]); // 947
+array_snapshot_pop_front<bytes31>([8]) { fallthrough([9], [10]) 954([11]) }; // 948
+branch_align() -> (); // 949
+enum_init<core::option::Option::<core::box::Box::<@core::bytes_31::bytes31>>, 0>([10]) -> ([12]); // 950
+store_temp<Snapshot<Array<bytes31>>>([9]) -> ([13]); // 951
+store_temp<core::option::Option::<core::box::Box::<@core::bytes_31::bytes31>>>([12]) -> ([14]); // 952
+jump() { 959() }; // 953
+branch_align() -> (); // 954
+struct_construct<Unit>() -> ([15]); // 955
+enum_init<core::option::Option::<core::box::Box::<@core::bytes_31::bytes31>>, 1>([15]) -> ([16]); // 956
+store_temp<Snapshot<Array<bytes31>>>([11]) -> ([13]); // 957
+store_temp<core::option::Option::<core::box::Box::<@core::bytes_31::bytes31>>>([16]) -> ([14]); // 958
+enum_match<core::option::Option::<core::box::Box::<@core::bytes_31::bytes31>>>([14]) { fallthrough([17]) 974([18]) }; // 959
+branch_align() -> (); // 960
+disable_ap_tracking() -> (); // 961
+unbox<bytes31>([17]) -> ([19]); // 962
+rename<bytes31>([19]) -> ([20]); // 963
+bytes31_to_felt252([20]) -> ([21]); // 964
+store_temp<felt252>([21]) -> ([21]); // 965
+array_append<felt252>([3], [21]) -> ([22]); // 966
+struct_construct<core::array::Span::<core::bytes_31::bytes31>>([13]) -> ([23]); // 967
+store_temp<RangeCheck>([4]) -> ([4]); // 968
+store_temp<GasBuiltin>([5]) -> ([5]); // 969
+store_temp<core::array::Span::<core::bytes_31::bytes31>>([23]) -> ([23]); // 970
+store_temp<Array<felt252>>([22]) -> ([22]); // 971
+function_call<user@core::array::serialize_array_helper::<core::bytes_31::bytes31, core::serde::into_felt252_based::SerdeImpl::<core::bytes_31::bytes31, core::bytes_31::bytes31Copy, core::bytes_31::Bytes31IntoFelt252, core::bytes_31::Felt252TryIntoBytes31>, core::bytes_31::bytes31Drop>>([4], [5], [23], [22]) -> ([24], [25], [26]); // 972
+return([24], [25], [26]); // 973
+branch_align() -> (); // 974
+disable_ap_tracking() -> (); // 975
+drop<Unit>([18]) -> (); // 976
+drop<Snapshot<Array<bytes31>>>([13]) -> (); // 977
+struct_construct<Unit>() -> ([27]); // 978
+struct_construct<Tuple<Array<felt252>, Unit>>([3], [27]) -> ([28]); // 979
+enum_init<core::panics::PanicResult::<(core::array::Array::<core::felt252>, ())>, 0>([28]) -> ([29]); // 980
+store_temp<RangeCheck>([4]) -> ([4]); // 981
+store_temp<GasBuiltin>([5]) -> ([5]); // 982
+store_temp<core::panics::PanicResult::<(core::array::Array::<core::felt252>, ())>>([29]) -> ([29]); // 983
+return([4], [5], [29]); // 984
+branch_align() -> (); // 985
+drop<Array<felt252>>([3]) -> (); // 986
+drop<core::array::Span::<core::bytes_31::bytes31>>([2]) -> (); // 987
+array_new<felt252>() -> ([30]); // 988
+const_as_immediate<Const<felt252, 375233589013918064796019>>() -> ([31]); // 989
+store_temp<felt252>([31]) -> ([31]); // 990
+array_append<felt252>([30], [31]) -> ([32]); // 991
+struct_construct<core::panics::Panic>() -> ([33]); // 992
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([33], [32]) -> ([34]); // 993
+enum_init<core::panics::PanicResult::<(core::array::Array::<core::felt252>, ())>, 1>([34]) -> ([35]); // 994
+store_temp<RangeCheck>([6]) -> ([6]); // 995
+store_temp<GasBuiltin>([7]) -> ([7]); // 996
+store_temp<core::panics::PanicResult::<(core::array::Array::<core::felt252>, ())>>([35]) -> ([35]); // 997
+return([6], [7], [35]); // 998
+downcast<u32, BoundedInt<0, 15>>([0], [1]) { fallthrough([2], [3]) 1089([4]) }; // 999
+branch_align() -> (); // 1000
+enum_from_bounded_int<index_enum_type<16>>([3]) -> ([5]); // 1001
+store_temp<index_enum_type<16>>([5]) -> ([5]); // 1002
+store_temp<RangeCheck>([2]) -> ([2]); // 1003
+enum_match<index_enum_type<16>>([5]) { fallthrough([6]) 1010([7]) 1015([8]) 1020([9]) 1025([10]) 1030([11]) 1035([12]) 1040([13]) 1045([14]) 1050([15]) 1055([16]) 1060([17]) 1065([18]) 1070([19]) 1075([20]) 1080([21]) }; // 1004
+branch_align() -> (); // 1005
+drop<Unit>([6]) -> (); // 1006
+const_as_immediate<Const<u128, 1>>() -> ([22]); // 1007
+store_temp<u128>([22]) -> ([23]); // 1008
+jump() { 1084() }; // 1009
+branch_align() -> (); // 1010
+drop<Unit>([7]) -> (); // 1011
+const_as_immediate<Const<u128, 256>>() -> ([24]); // 1012
+store_temp<u128>([24]) -> ([23]); // 1013
+jump() { 1084() }; // 1014
+branch_align() -> (); // 1015
+drop<Unit>([8]) -> (); // 1016
+const_as_immediate<Const<u128, 65536>>() -> ([25]); // 1017
+store_temp<u128>([25]) -> ([23]); // 1018
+jump() { 1084() }; // 1019
+branch_align() -> (); // 1020
+drop<Unit>([9]) -> (); // 1021
+const_as_immediate<Const<u128, 16777216>>() -> ([26]); // 1022
+store_temp<u128>([26]) -> ([23]); // 1023
+jump() { 1084() }; // 1024
+branch_align() -> (); // 1025
+drop<Unit>([10]) -> (); // 1026
+const_as_immediate<Const<u128, 4294967296>>() -> ([27]); // 1027
+store_temp<u128>([27]) -> ([23]); // 1028
+jump() { 1084() }; // 1029
+branch_align() -> (); // 1030
+drop<Unit>([11]) -> (); // 1031
+const_as_immediate<Const<u128, 1099511627776>>() -> ([28]); // 1032
+store_temp<u128>([28]) -> ([23]); // 1033
+jump() { 1084() }; // 1034
+branch_align() -> (); // 1035
+drop<Unit>([12]) -> (); // 1036
+const_as_immediate<Const<u128, 281474976710656>>() -> ([29]); // 1037
+store_temp<u128>([29]) -> ([23]); // 1038
+jump() { 1084() }; // 1039
+branch_align() -> (); // 1040
+drop<Unit>([13]) -> (); // 1041
+const_as_immediate<Const<u128, 72057594037927936>>() -> ([30]); // 1042
+store_temp<u128>([30]) -> ([23]); // 1043
+jump() { 1084() }; // 1044
+branch_align() -> (); // 1045
+drop<Unit>([14]) -> (); // 1046
+const_as_immediate<Const<u128, 18446744073709551616>>() -> ([31]); // 1047
+store_temp<u128>([31]) -> ([23]); // 1048
+jump() { 1084() }; // 1049
+branch_align() -> (); // 1050
+drop<Unit>([15]) -> (); // 1051
+const_as_immediate<Const<u128, 4722366482869645213696>>() -> ([32]); // 1052
+store_temp<u128>([32]) -> ([23]); // 1053
+jump() { 1084() }; // 1054
+branch_align() -> (); // 1055
+drop<Unit>([16]) -> (); // 1056
+const_as_immediate<Const<u128, 1208925819614629174706176>>() -> ([33]); // 1057
+store_temp<u128>([33]) -> ([23]); // 1058
+jump() { 1084() }; // 1059
+branch_align() -> (); // 1060
+drop<Unit>([17]) -> (); // 1061
+const_as_immediate<Const<u128, 309485009821345068724781056>>() -> ([34]); // 1062
+store_temp<u128>([34]) -> ([23]); // 1063
+jump() { 1084() }; // 1064
+branch_align() -> (); // 1065
+drop<Unit>([18]) -> (); // 1066
+const_as_immediate<Const<u128, 79228162514264337593543950336>>() -> ([35]); // 1067
+store_temp<u128>([35]) -> ([23]); // 1068
+jump() { 1084() }; // 1069
+branch_align() -> (); // 1070
+drop<Unit>([19]) -> (); // 1071
+const_as_immediate<Const<u128, 20282409603651670423947251286016>>() -> ([36]); // 1072
+store_temp<u128>([36]) -> ([23]); // 1073
+jump() { 1084() }; // 1074
+branch_align() -> (); // 1075
+drop<Unit>([20]) -> (); // 1076
+const_as_immediate<Const<u128, 5192296858534827628530496329220096>>() -> ([37]); // 1077
+store_temp<u128>([37]) -> ([23]); // 1078
+jump() { 1084() }; // 1079
+branch_align() -> (); // 1080
+drop<Unit>([21]) -> (); // 1081
+const_as_immediate<Const<u128, 1329227995784915872903807060280344576>>() -> ([38]); // 1082
+store_temp<u128>([38]) -> ([23]); // 1083
+struct_construct<Tuple<u128>>([23]) -> ([39]); // 1084
+enum_init<core::panics::PanicResult::<(core::integer::u128,)>, 0>([39]) -> ([40]); // 1085
+store_temp<RangeCheck>([2]) -> ([2]); // 1086
+store_temp<core::panics::PanicResult::<(core::integer::u128,)>>([40]) -> ([40]); // 1087
+return([2], [40]); // 1088
+branch_align() -> (); // 1089
+array_new<felt252>() -> ([41]); // 1090
+const_as_immediate<Const<felt252, 573087285299505011920718992710461799>>() -> ([42]); // 1091
+store_temp<felt252>([42]) -> ([42]); // 1092
+array_append<felt252>([41], [42]) -> ([43]); // 1093
+struct_construct<core::panics::Panic>() -> ([44]); // 1094
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([44], [43]) -> ([45]); // 1095
+enum_init<core::panics::PanicResult::<(core::integer::u128,)>, 1>([45]) -> ([46]); // 1096
+store_temp<RangeCheck>([4]) -> ([4]); // 1097
+store_temp<core::panics::PanicResult::<(core::integer::u128,)>>([46]) -> ([46]); // 1098
+return([4], [46]); // 1099
+
+astro::main@0([0]: RangeCheck, [1]: GasBuiltin) -> (RangeCheck, GasBuiltin, core::panics::PanicResult::<((),)>);
+core::byte_array::ByteArrayImpl::append_word@79([0]: RangeCheck, [1]: core::byte_array::ByteArray, [2]: felt252, [3]: u32) -> (RangeCheck, core::panics::PanicResult::<(core::byte_array::ByteArray, ())>);
+core::array::serialize_array_helper::<core::bytes_31::bytes31, core::serde::into_felt252_based::SerdeImpl::<core::bytes_31::bytes31, core::bytes_31::bytes31Copy, core::bytes_31::Bytes31IntoFelt252, core::bytes_31::Felt252TryIntoBytes31>, core::bytes_31::bytes31Drop>@942([0]: RangeCheck, [1]: GasBuiltin, [2]: core::array::Span::<core::bytes_31::bytes31>, [3]: Array<felt252>) -> (RangeCheck, GasBuiltin, core::panics::PanicResult::<(core::array::Array::<core::felt252>, ())>);
+core::bytes_31::one_shift_left_bytes_u128@999([0]: RangeCheck, [1]: u32) -> (RangeCheck, core::panics::PanicResult::<(core::integer::u128,)>);
+
