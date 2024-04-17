@@ -43,9 +43,8 @@ pub fn compile_cairo_program(cairo_program: String, replace_ids: bool) -> Result
 }
 
 #[wasm_bindgen(js_name = runCairoProgram)]
-pub fn run_cairo_program(cairo_program: String, available_gas: Option<usize>, print_full_memory: bool, use_dbg_print_hint: bool) -> Result<String, JsError> {
-    // TODO: Add support for run_profiler and allow_warnings
-    let cairo_program_result = run_with_input_program_string(&cairo_program, available_gas, false, print_full_memory, false, use_dbg_print_hint);
+pub fn run_cairo_program(cairo_program: String, available_gas: Option<usize>, allow_warnings: bool, print_full_memory: bool, run_profiler: bool, use_dbg_print_hint: bool) -> Result<String, JsError> {
+    let cairo_program_result = run_with_input_program_string(&cairo_program, available_gas, allow_warnings, print_full_memory, run_profiler, use_dbg_print_hint);
     let cairo_program_result_str = match cairo_program_result {
         Ok(cairo_program_result_str) => {
             cairo_program_result_str
@@ -59,9 +58,8 @@ pub fn run_cairo_program(cairo_program: String, available_gas: Option<usize>, pr
 }
 
 #[wasm_bindgen(js_name = compileStarknetContract)]
-pub fn compile_starknet_contract(starknet_contract: String, replace_ids: bool) -> Result<String, JsError> {
-    // TODO: Add support for allow_warnings
-    let sierra_contract = starknet_wasm_compile_with_input_string(&starknet_contract, false, replace_ids, None, None, None);
+pub fn compile_starknet_contract(starknet_contract: String, allow_warnings: bool, replace_ids: bool) -> Result<String, JsError> {
+    let sierra_contract = starknet_wasm_compile_with_input_string(&starknet_contract, allow_warnings, replace_ids, None, None, None);
     let sierra_contract_str = match sierra_contract {
         Ok(sierra_program) => {
             sierra_program.to_string()

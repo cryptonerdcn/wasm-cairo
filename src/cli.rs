@@ -37,12 +37,12 @@ pub fn main() -> anyhow::Result<()> {
         }
         "runCairoProgram" => {
             let cairo_program_result_str =
-                run_cairo_program(args.input_program_string.unwrap(), None, true, true);
+                run_cairo_program(args.input_program_string.unwrap(), None, true, true, false, true);
             println!("{}", cairo_program_result_str.unwrap());
         }
         "compileStarknetContract" => {
             let sierra_contract_str =
-                compile_starknet_contract(args.input_program_string.unwrap(), true);
+                compile_starknet_contract(args.input_program_string.unwrap(), true, true);
             println!("{}", sierra_contract_str.unwrap());
         }
         _ => {
@@ -75,16 +75,17 @@ fn compile_cairo_program(cairo_program: String, replace_ids: bool) -> Result<Str
 fn run_cairo_program(
     cairo_program: String,
     available_gas: Option<usize>,
+    allow_warnings: bool,
     print_full_memory: bool,
+    run_profiler: bool,
     use_dbg_print_hint: bool,
 ) -> Result<String, Error> {
-    // TODO: Add support for run_profiler and allow_warnings
     let cairo_program_result = run_with_input_program_string(
         &cairo_program,
         available_gas,
-        false,
+        allow_warnings,
         print_full_memory,
-        false,
+        run_profiler,
         use_dbg_print_hint,
     );
     let cairo_program_result_str = match cairo_program_result {
@@ -99,11 +100,11 @@ fn run_cairo_program(
 
 fn compile_starknet_contract(
     starknet_contract: String,
+    allow_warnings: bool,
     replace_ids: bool,
 ) -> Result<String, Error> {
-    // TODO: Add support for allow_warnings
     let sierra_contract =
-        starknet_wasm_compile_with_input_string(&starknet_contract, false, replace_ids, None, None, None);
+        starknet_wasm_compile_with_input_string(&starknet_contract, allow_warnings, replace_ids, None, None, None);
     let sierra_contract_str = match sierra_contract {
         Ok(sierra_program) => sierra_program.to_string(),
         Err(e) => {
