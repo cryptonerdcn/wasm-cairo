@@ -47,6 +47,11 @@ Run
 ./wasmtime_test.sh runCairoProgram ./cairo_files/HelloStarknetAstro.cairo
 ```
 
+Run Tests
+```
+./wasmtime_test.sh runTests ./cairo_files/Test.cairo
+```
+
 Compile Contract
 
 ```

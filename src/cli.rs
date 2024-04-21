@@ -1,12 +1,13 @@
 use anyhow::Error;
 use clap::Parser;
-use std::path::Path;
+use std::{path::Path, result};
 
 use cairo_lang_compiler::{
     wasm_cairo_interface::compile_cairo_project_with_input_string, CompilerConfig,
 };
 use cairo_lang_runner::wasm_cairo_interface::run_with_input_program_string;
 use cairo_lang_starknet::wasm_cairo_interface::starknet_wasm_compile_with_input_string;
+use cairo_lang_test_runner::wasm_cairo_interface::run_tests_with_input_string_parsed;
 /// Command line args parser.
 /// Exits with 0/1 if the input is formatted correctly/incorrectly.
 #[derive(Parser, Debug)]
@@ -39,6 +40,10 @@ pub fn main() -> anyhow::Result<()> {
             let cairo_program_result_str =
                 run_cairo_program(args.input_program_string.unwrap(), None, true, true, false, true);
             println!("{}", cairo_program_result_str.unwrap());
+        }
+        "runTests" => {
+            let test_results_str = run_tests(args.input_program_string.unwrap());
+            println!("{}", test_results_str.unwrap());
         }
         "compileStarknetContract" => {
             let sierra_contract_str =
@@ -113,4 +118,25 @@ fn compile_starknet_contract(
         }
     };
     Ok(sierra_contract_str)
+}
+
+fn run_tests(input_string: String) -> Result<String, Error> {
+    let test_results = run_tests_with_input_string_parsed(
+        &input_string,
+        false,
+        "".to_string(),
+        false,
+        false,
+        false,
+        "".to_string(),
+        false,
+        false,
+    );
+    let test_results_str = match test_results {
+        Ok(test_results_str) => test_results_str,
+        Err(e) => {
+            e.to_string()
+        }
+    };
+    Ok(test_results_str)
 }
