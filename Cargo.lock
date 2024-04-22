@@ -2416,7 +2416,7 @@ dependencies = [
 
 [[package]]
 name = "wasm-cairo"
-version = "0.8.5"
+version = "0.8.7"
 dependencies = [
  "anyhow",
  "cairo-lang-compiler",
