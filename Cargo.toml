@@ -1,12 +1,12 @@
 [package]
 name = "wasm-cairo"
-version = "0.8.7"
+version = "0.8.8"
 authors = ["cryptonerdcn <cryptonerdcn@gmail.com> (https://twitter.com/cryptonerdcn)"]
 edition = "2018"
 description = "WASM runtime for Cairo language and Starknet"
 license = "Apache-2.0"
 repository = "https://github.com/cryptonerdcn/wasm-cairo.git"
-keywords = ["no_std, wasm, cairo, starkware, starknet, zero-knowledge, zk, dapp, zk-STARK, zkSTARK, off-chain"]
+keywords = ["no_std", "wasm", "cairo", "starkware", "starknet", "zero-knowledge", "zk", "dapp", "zk-STARK", "zkSTARK", "off-chain"]
 
 [lib]
 crate-type = ["cdylib", "rlib"]
