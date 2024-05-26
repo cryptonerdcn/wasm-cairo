@@ -70,7 +70,7 @@ Run Tests
 Compile Contract
 
 ```
-./wasmtime_test.sh compileStarknetContract ./cairo_files/erc20.cairo ./cairo_files/erc20.json
+./wasmtime_test.sh compileStarknetContract ./cairo_files/storage.cairo ./cairo_files/storage.json  
 ```
 
 ## 🔋 Batteries Included
