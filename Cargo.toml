@@ -1,6 +1,6 @@
 [package]
 name = "wasm-cairo"
-version = "0.8.8"
+version = "0.9.2"
 authors = ["cryptonerdcn <cryptonerdcn@gmail.com> (https://twitter.com/cryptonerdcn)"]
 edition = "2018"
 description = "WASM runtime for Cairo language and Starknet"
@@ -18,10 +18,10 @@ default = ["console_error_panic_hook", "wee_alloc"]
 clap = { version = "4.2.5", features = ["derive"] }
 serde_json = "1.0.91"
 wasm-bindgen = "0.2.87"
-cairo-lang-starknet = { package = "cairo-lang-starknet", git = "https://github.com/cryptonerdcn/cairo.git", rev = "5bb0fde24b3ef528a194d9c163b66a59cbca3af6"}
-cairo-lang-compiler = { package = "cairo-lang-compiler", git = "https://github.com/cryptonerdcn/cairo.git", rev = "5bb0fde24b3ef528a194d9c163b66a59cbca3af6"}
-cairo-lang-runner = { package = "cairo-lang-runner", git = "https://github.com/cryptonerdcn/cairo.git", rev = "5bb0fde24b3ef528a194d9c163b66a59cbca3af6", features = ["alloc"], default-features = false}
-cairo-lang-test-runner = { package = "cairo-lang-test-runner", git = "https://github.com/cryptonerdcn/cairo.git", rev = "5bb0fde24b3ef528a194d9c163b66a59cbca3af6", features = ["alloc"], default-features = false}
+cairo-lang-starknet = { package = "cairo-lang-starknet", git = "https://github.com/cryptonerdcn/cairo.git", rev = "43391f82cb6d7486aa030903f05b1eb50138cea3"}
+cairo-lang-compiler = { package = "cairo-lang-compiler", git = "https://github.com/cryptonerdcn/cairo.git", rev = "43391f82cb6d7486aa030903f05b1eb50138cea3"}
+cairo-lang-runner = { package = "cairo-lang-runner", git = "https://github.com/cryptonerdcn/cairo.git", rev = "43391f82cb6d7486aa030903f05b1eb50138cea3", features = ["alloc"], default-features = false}
+cairo-lang-test-runner = { package = "cairo-lang-test-runner", git = "https://github.com/cryptonerdcn/cairo.git", rev = "43391f82cb6d7486aa030903f05b1eb50138cea3", features = ["alloc"], default-features = false}
 
 
 # The `console_error_panic_hook` crate provides better debugging of panics by
