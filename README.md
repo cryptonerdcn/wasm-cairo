@@ -16,6 +16,11 @@ WASM runtime for Cairo language and Starknet
 
 ## 🚴 Usage
 
+How to use:
+1. You can download the precompiled wasm file from [here](https://github.com/cryptonerdcn/wasm-cairo/releases).
+2. If you want to use WASM-Cairo in your Web App, you can also use npm package [wasm-cairo](https://www.npmjs.com/package/wasm-cairo).
+
+If you prefer to build it yourself, you can follow the steps below.
 
 ### 🛠️ Build WASM-bindgen's WASM-Cairo Toolkit 
 With Modules
@@ -84,7 +89,7 @@ Compile Contract
 * [`wee_alloc`](https://github.com/rustwasm/wee_alloc), an allocator optimized
   for small code size.
 * [`Cairo`](https://github.com/starkware-libs/cairo) for Cairo-lang support.
-* `LICENSE-APACHE` and `LICENSE-MIT`: most Rust projects are licensed this way, so these are included for you
+* `LICENSE-APACHE`.
 
 ## License
 
