@@ -50,6 +50,8 @@ No Modules
 wasm-pack pack output/no_module 
 ```
 
+Caution: Do not run `wasm-pack publish` after `wasm-pack pack output/no_module`. It will publish the no-modules version.
+
 ### 🛠️ Build WASMTIME's WASM-Cairo Toolkit
 
 ```
