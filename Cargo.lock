@@ -327,7 +327,7 @@ checksum = "1fd0f2584146f6f2ef48085050886acf353beff7305ebd1ae69500e27c67f64b"
 [[package]]
 name = "cairo-lang-casm"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "cairo-lang-utils",
  "indoc",
@@ -340,7 +340,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-compiler"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "anyhow",
  "cairo-lang-defs",
@@ -365,7 +365,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-debug"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "cairo-lang-utils",
 ]
@@ -373,7 +373,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-defs"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "cairo-lang-debug",
  "cairo-lang-diagnostics",
@@ -389,7 +389,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-diagnostics"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "cairo-lang-debug",
  "cairo-lang-filesystem",
@@ -400,7 +400,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-eq-solver"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "cairo-lang-utils",
  "good_lp",
@@ -409,7 +409,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-filesystem"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "cairo-lang-debug",
  "cairo-lang-utils",
@@ -426,7 +426,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-formatter"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "anyhow",
  "cairo-lang-diagnostics",
@@ -446,7 +446,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-lowering"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "cairo-lang-debug",
  "cairo-lang-defs",
@@ -469,7 +469,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-parser"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "cairo-lang-diagnostics",
  "cairo-lang-filesystem",
@@ -488,7 +488,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-plugins"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "cairo-lang-defs",
  "cairo-lang-diagnostics",
@@ -506,7 +506,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-proc-macros"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "cairo-lang-debug",
  "quote",
@@ -516,7 +516,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-project"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "cairo-lang-filesystem",
  "cairo-lang-utils",
@@ -529,7 +529,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-runner"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "anyhow",
  "ark-ff",
@@ -554,6 +554,8 @@ dependencies = [
  "num-integer",
  "num-traits",
  "rand",
+ "serde",
+ "serde_json",
  "sha2",
  "smol_str",
  "starknet-types-core",
@@ -564,7 +566,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-semantic"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "cairo-lang-debug",
  "cairo-lang-defs",
@@ -589,7 +591,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-sierra"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "anyhow",
  "cairo-lang-utils",
@@ -615,7 +617,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-sierra-ap-change"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "cairo-lang-eq-solver",
  "cairo-lang-sierra",
@@ -630,7 +632,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-sierra-gas"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "cairo-lang-eq-solver",
  "cairo-lang-sierra",
@@ -645,7 +647,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-sierra-generator"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "cairo-lang-debug",
  "cairo-lang-defs",
@@ -668,7 +670,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-sierra-to-casm"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "assert_matches",
  "cairo-lang-casm",
@@ -688,7 +690,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-sierra-type-size"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "cairo-lang-sierra",
  "cairo-lang-utils",
@@ -697,7 +699,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-starknet"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "anyhow",
  "cairo-lang-compiler",
@@ -726,7 +728,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-starknet-classes"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "cairo-lang-casm",
  "cairo-lang-sierra",
@@ -748,7 +750,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-syntax"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "cairo-lang-debug",
  "cairo-lang-filesystem",
@@ -763,7 +765,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-syntax-codegen"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "genco",
  "xshell",
@@ -772,7 +774,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-test-plugin"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "anyhow",
  "cairo-lang-compiler",
@@ -798,7 +800,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-test-runner"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "anyhow",
  "cairo-lang-compiler",
@@ -820,7 +822,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-test-utils"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "cairo-lang-formatter",
  "cairo-lang-utils",
@@ -832,7 +834,7 @@ dependencies = [
 [[package]]
 name = "cairo-lang-utils"
 version = "2.8.2"
-source = "git+https://github.com/cryptonerdcn/cairo.git?rev=37b729536426532aee6c0633090e5a1e46a2b197#37b729536426532aee6c0633090e5a1e46a2b197"
+source = "git+https://github.com/cryptonerdcn/cairo.git?rev=79c83907997f9b715d25e9b6693a06c56f482cab#79c83907997f9b715d25e9b6693a06c56f482cab"
 dependencies = [
  "hashbrown 0.14.5",
  "indexmap 2.6.0",
@@ -2625,7 +2627,7 @@ dependencies = [
 
 [[package]]
 name = "wasm-cairo"
-version = "0.10.2"
+version = "0.10.3"
 dependencies = [
  "anyhow",
  "cairo-lang-compiler",
@@ -2634,6 +2636,7 @@ dependencies = [
  "cairo-lang-test-runner",
  "clap",
  "console_error_panic_hook",
+ "js-sys",
  "parking_lot_core 0.8.0",
  "rust-embed",
  "serde_json",
