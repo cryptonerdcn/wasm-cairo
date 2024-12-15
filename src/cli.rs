@@ -5,7 +5,7 @@ use std::{path::Path, result};
 use cairo_lang_compiler::{
     wasm_cairo_interface::compile_cairo_project_with_input_string, CompilerConfig,
 };
-use cairo_lang_runner::wasm_cairo_interface::run_with_input_program_string;
+use cairo_lang_runner::wasm_cairo_interface::{run_with_input_program_string, run_with_sierra_json_string};
 use cairo_lang_starknet::wasm_cairo_interface::starknet_wasm_compile_with_input_string;
 use cairo_lang_test_runner::wasm_cairo_interface::run_tests_with_input_string_parsed;
 /// Command line args parser.
@@ -40,6 +40,11 @@ pub fn main() -> anyhow::Result<()> {
             let cairo_program_result_str =
                 run_cairo_program(args.input_program_string.unwrap(), None, true, true, false, true);
             println!("{}", cairo_program_result_str.unwrap());
+        }
+        "runSierraProgram" => {
+            let sierra_program_result_str =
+                run_sierra_program(args.input_program_string.unwrap(), None, true, false, true);
+            println!("{}", sierra_program_result_str.unwrap());
         }
         "runTests" => {
             let test_results_str = run_tests(args.input_program_string.unwrap());
@@ -101,6 +106,21 @@ fn run_cairo_program(
         }
     };
     Ok(cairo_program_result_str)
+}
+
+fn run_sierra_program(
+    sierra_program: String,
+    available_gas: Option<usize>,
+    print_full_memory: bool,
+    run_profiler: bool,
+    use_dbg_print_hint: bool,
+) -> Result<String, Error> {
+    let sierra_program_result = run_with_sierra_json_string(&sierra_program, available_gas, print_full_memory, run_profiler, use_dbg_print_hint);
+    let result_str = match sierra_program_result {
+        Ok(result) => result,
+        Err(e) => e.to_string()
+    };
+    Ok(result_str)
 }
 
 fn compile_starknet_contract(
