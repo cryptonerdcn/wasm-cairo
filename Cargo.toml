@@ -8,6 +8,9 @@ license = "Apache-2.0"
 repository = "https://github.com/cryptonerdcn/wasm-cairo.git"
 keywords = ["no_std", "wasm", "cairo", "starkware", "starknet", "zero-knowledge", "zk", "dapp", "zk-STARK", "zkSTARK", "off-chain"]
 
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = false
+
 [lib]
 crate-type = ["cdylib", "rlib"]
 
@@ -17,11 +20,12 @@ default = ["console_error_panic_hook", "wee_alloc"]
 [dependencies]
 clap = { version = "4.2.5", features = ["derive"] }
 serde_json = "1.0.91"
-wasm-bindgen = "0.2.87"
-cairo-lang-starknet = { package = "cairo-lang-starknet", git = "https://github.com/cryptonerdcn/cairo.git", rev = "37b729536426532aee6c0633090e5a1e46a2b197"}
-cairo-lang-compiler = { package = "cairo-lang-compiler", git = "https://github.com/cryptonerdcn/cairo.git", rev = "37b729536426532aee6c0633090e5a1e46a2b197"}
-cairo-lang-runner = { package = "cairo-lang-runner", git = "https://github.com/cryptonerdcn/cairo.git", rev = "37b729536426532aee6c0633090e5a1e46a2b197", features = ["alloc"], default-features = false}
-cairo-lang-test-runner = { package = "cairo-lang-test-runner", git = "https://github.com/cryptonerdcn/cairo.git", rev = "37b729536426532aee6c0633090e5a1e46a2b197", features = ["alloc"], default-features = false}
+wasm-bindgen = "0.2.95"
+cairo-lang-starknet = { package = "cairo-lang-starknet", git = "https://github.com/cryptonerdcn/cairo.git" }
+cairo-lang-starknet-classes = { package = "cairo-lang-starknet-classes", git = "https://github.com/cryptonerdcn/cairo.git" }
+cairo-lang-compiler = { package = "cairo-lang-compiler", git = "https://github.com/cryptonerdcn/cairo.git" }
+cairo-lang-runner = { package = "cairo-lang-runner", git = "https://github.com/cryptonerdcn/cairo.git", features = ["alloc"], default-features = false }
+cairo-lang-test-runner = { package = "cairo-lang-test-runner", git = "https://github.com/cryptonerdcn/cairo.git", features = ["alloc"], default-features = false }
 
 
 # The `console_error_panic_hook` crate provides better debugging of panics by
@@ -36,7 +40,7 @@ console_error_panic_hook = { version = "0.1.6", optional = true }
 wee_alloc = { version = "0.4.5", optional = true }
 
 [dev-dependencies]
-wasm-bindgen-test = "0.3.13"
+wasm-bindgen-test = "0.3.45"
 rust-embed = "6.7.0"
 
 [dependencies.anyhow]
@@ -53,6 +57,7 @@ strip = true
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
 parking_lot_core = "=0.8.0"
+getrandom = { version = "0.3", features = ["wasm_js"] }
 
 [[bin]]
 name = "wasm-cairo"
