@@ -110,7 +110,7 @@ fn parse_project_input(json_str: &str) -> Result<(String, HashMap<String, String
             dependencies.insert(dep_name.clone(), DependencyInput {
                 files: dep_files,
                 edition,
-                dependencies: dep_deps,
+                dependencies: dep_dep_names,
             });
         }
     }
@@ -135,7 +135,7 @@ pub fn get_cairo_version() -> String {
 #[wasm_bindgen]
 pub fn greet(s: &str) -> String {
     utils::set_panic_hook();
-    return format!("Hello {}!", s);
+    format!("Hello {}!", s)
 }
 
 #[wasm_bindgen(js_name = compileCairoProgram)]
@@ -144,18 +144,18 @@ pub fn compile_cairo_program(cairo_program: String, replace_ids: bool) -> Result
         Path::new("./astro.cairo"),
         &cairo_program,
         CompilerConfig {
-            replace_ids: replace_ids,
+            replace_ids,
             ..CompilerConfig::default()
         },
     );
-    let sierra_program_str = match sierra_program {
-        Ok(sierra_program) => sierra_program.to_string(),
+    match sierra_program {
+        Ok(sierra_program) => Ok(sierra_program.to_string()),
         Err(e) => {
-            log(e.to_string().as_str());
-            e.to_string()
+            let err = e.to_string();
+            log(err.as_str());
+            Err(JsError::new(&err))
         }
-    };
-    Ok(sierra_program_str)
+    }
 }
 
 #[wasm_bindgen(js_name = runCairoProgram)]
@@ -175,14 +175,14 @@ pub fn run_cairo_program(
         run_profiler,
         use_dbg_print_hint,
     );
-    let cairo_program_result_str = match cairo_program_result {
-        Ok(cairo_program_result_str) => cairo_program_result_str,
+    match cairo_program_result {
+        Ok(result) => Ok(result),
         Err(e) => {
-            log(e.to_string().as_str());
-            e.to_string()
+            let err = e.to_string();
+            log(err.as_str());
+            Err(JsError::new(&err))
         }
-    };
-    Ok(cairo_program_result_str)
+    }
 }
 
 #[wasm_bindgen(js_name = runTests)]
@@ -208,14 +208,14 @@ pub fn run_tests(
         gas_disabled,
         print_resource_usage,
     );
-    let test_results_str = match test_results {
-        Ok(test_results) => test_results.to_string(),
+    match test_results {
+        Ok(results) => Ok(results.to_string()),
         Err(e) => {
-            log(e.to_string().as_str());
-            e.to_string()
+            let err = e.to_string();
+            log(err.as_str());
+            Err(JsError::new(&err))
         }
-    };
-    Ok(test_results_str)
+    }
 }
 
 #[wasm_bindgen(js_name = compileStarknetContract)]
@@ -234,14 +234,14 @@ pub fn compile_starknet_contract(
         None,
         None,
     );
-    let sierra_contract_str = match sierra_contract {
-        Ok(sierra_program) => sierra_program.to_string(),
+    match sierra_contract {
+        Ok(program) => Ok(program.to_string()),
         Err(e) => {
-            log(e.to_string().as_str());
-            e.to_string()
+            let err = e.to_string();
+            log(err.as_str());
+            Err(JsError::new(&err))
         }
-    };
-    Ok(sierra_contract_str)
+    }
 }
 
 // ========== Multi-file project APIs (new) ==========
@@ -262,14 +262,14 @@ pub fn compile_cairo_project(project_json: String, replace_ids: bool) -> Result<
             ..CompilerConfig::default()
         },
     );
-    let sierra_program_str = match sierra_program {
-        Ok(sierra_program) => sierra_program.to_string(),
+    match sierra_program {
+        Ok(program) => Ok(program.to_string()),
         Err(e) => {
-            log(e.to_string().as_str());
-            e.to_string()
+            let err = e.to_string();
+            log(err.as_str());
+            Err(JsError::new(&err))
         }
-    };
-    Ok(sierra_program_str)
+    }
 }
 
 /// Run a multi-file Cairo project.
@@ -296,14 +296,14 @@ pub fn run_cairo_project(
         run_profiler,
         use_dbg_print_hint,
     );
-    let result_str = match result {
-        Ok(s) => s,
+    match result {
+        Ok(s) => Ok(s),
         Err(e) => {
-            log(e.to_string().as_str());
-            e.to_string()
+            let err = e.to_string();
+            log(err.as_str());
+            Err(JsError::new(&err))
         }
-    };
-    Ok(result_str)
+    }
 }
 
 /// Compile a multi-file Starknet contract project.
@@ -331,14 +331,14 @@ pub fn compile_starknet_project(
         None,
         None,
     );
-    let result_str = match result {
-        Ok(s) => s,
+    match result {
+        Ok(s) => Ok(s),
         Err(e) => {
-            log(e.to_string().as_str());
-            e.to_string()
+            let err = e.to_string();
+            log(err.as_str());
+            Err(JsError::new(&err))
         }
-    };
-    Ok(result_str)
+    }
 }
 
 /// Run tests in a multi-file Cairo project.
@@ -369,12 +369,12 @@ pub fn run_project_tests(
         gas_disabled,
         print_resource_usage,
     );
-    let result_str = match result {
-        Ok(s) => s,
+    match result {
+        Ok(s) => Ok(s),
         Err(e) => {
-            log(e.to_string().as_str());
-            e.to_string()
+            let err = e.to_string();
+            log(err.as_str());
+            Err(JsError::new(&err))
         }
-    };
-    Ok(result_str)
+    }
 }
